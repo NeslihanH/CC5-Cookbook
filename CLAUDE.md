@@ -1,0 +1,92 @@
+# CC5 Cookbook - Resume Doc (single source of truth)
+
+Read this first when resuming. Update after every milestone, before commit.
+Universal working method: `../extension_playbook.md` (one directory above this
+repo's parent). This file only holds what's specific to this project.
+
+## What this is
+
+A single-page reference app (SPA) for Reallusion's Character Creator 5 (CC5):
+a searchable, categorized reference covering core character creation, rigging
+and animation, pipeline/export, the closely-tied ecosystem (iClone, AccuRIG,
+ActorCore, mocap), step-by-step recipes, skill-tiered best practices
+(Beginner / Intermediate / Expert), a CC5-vs-CC4 diff, a glossary and a
+shortcuts/UI reference. Browse + reference; not a replacement for hands-on
+tutorials. Multilingual: English, Turkish, Chinese (Simplified), Spanish,
+German.
+
+Not affiliated with Reallusion. Content is independently researched from
+official Reallusion sources (reallusion.com, manual.reallusion.com, forum and
+magazine release notes) plus reputable trade press and community sources, but
+**always written from scratch in our own words** - never copied or closely
+paraphrased from Reallusion's manual or marketing copy - and marked Official
+vs Community per entry.
+
+## Hard rules
+
+- Chat in Turkish; all shipped code/identifiers/comments/filenames in English.
+- UI ships in five locales: `en`, `tr`, `zh`, `es`, `de`. English and Turkish
+  content is built first and is always complete; `zh`/`es`/`de` are added in a
+  later milestone and fall back to English until translated.
+- No em-dash in user-facing strings.
+- **Never copy or closely paraphrase Reallusion's official manual or marketing
+  text.** Research to find the facts, then write an original explanation in
+  our own words, in every language (translations must not read like machine
+  output either). Cite Official vs Community per entry, same model as Suno
+  Cookbook.
+- Content depth follows what's practically useful, not the official manual's
+  chapter structure or exhaustiveness - this is a curated reference, not a
+  manual clone.
+- No secrets, no backend, no API keys - this is a static client-only SPA.
+- Reallusion trademarks (Character Creator, CC5, AccuRIG, SkinGen, iClone,
+  ActorCore, etc.) are used only descriptively to refer to the product being
+  documented, never implying endorsement.
+
+## Locked stack
+
+- Vite + React 19 + TypeScript.
+- i18n: `i18next` + `react-i18next` (locale files in `src/i18n/locales`).
+- No backend. No router (single page). Client-side search (diacritic-insensitive,
+  to be added once content exists).
+- Deploy target: GitHub Pages (static build via GitHub Actions, public repo).
+
+## Repo layout
+
+```
+src/
+  i18n/            i18n config + locales/en.json, tr.json, zh.json, es.json, de.json
+  hooks/           useTheme (light/dark); useLocalized lands with the content schema
+  App.tsx          current: placeholder shell (brand, language switch, theme,
+                   roadmap cards). Will grow into browse/search/category layout.
+  main.tsx index.css
+```
+
+`src/data/` (content schema + datasets) is designed in M1 and does not exist
+yet. Component breakout (`Header`, `CategoryNav`, cards, etc.) happens once
+there is real content to render.
+
+## How to run
+
+```
+npm install
+npm run dev      # local dev server
+npm run build    # tsc -b && vite build  (must pass before commit)
+npm run preview  # serve the production build
+```
+
+## Status
+
+- M0 scaffold + i18n + docs: DONE.
+- M1 content schema/architecture: NOT STARTED.
+- M2-M7 content (Core Creation, Rigging & Animation, Pipeline & Export,
+  Ecosystem, Recipes, Best Practices/Glossary/Shortcuts), EN+TR: NOT STARTED.
+- M8 UI (browse, search, category nav, skill-level filter, copy, language
+  switch, theme): NOT STARTED.
+- M9 translation pass to zh/es/de: NOT STARTED.
+- M10 polish + trademark/English audit + deploy: NOT STARTED.
+
+## Next step
+
+M1: design the content schema (types for Feature, Recipe, BestPractice with
+skill level, GlossaryTerm, Shortcut, VersionDiff entry) and the final category
+tree, using the research already gathered in `Conversation.md`.

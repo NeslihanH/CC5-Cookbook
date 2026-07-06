@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neslihanh.github.io/CC5-Cookbook/sitemap.xml

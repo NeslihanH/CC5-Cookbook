@@ -1,0 +1,78 @@
+# Decisions (append-only architecture log)
+
+## D1 - Product shape: broad reference library, original wording, not a manual clone
+
+CC5 Cookbook covers CC5's full feature set and its closely-tied ecosystem
+(iClone, AccuRIG, ActorCore, mocap), organized as browsable categories +
+step-by-step recipes + skill-tiered best practices. Chosen after a multi-round
+discussion with the user. Explicitly **not** a copy of Reallusion's official
+manual: content depth follows what's practically useful, always written in
+original wording, never mirroring the manual's chapter structure or copying
+its text. Rationale: match Suno Cookbook's non-affiliated reference-library
+spirit while covering CC5's larger, more technical feature surface, and avoid
+copyright risk from reproducing manual content. The user was explicit and firm
+about this after an earlier draft plan leaned too close to "manual-equivalent
+depth" - corrected before any content was written.
+
+## D2 - No backend, static client-only SPA, deployed to GitHub Pages
+
+Like Suno Cookbook, there is no third-party API to call and no secrets to
+hold; the app is pure bundled static content. GitHub Pages (via GitHub
+Actions) is the deploy target, not Vercel: it's free, needs no external
+dashboard/account, and this project has no serverless/backend surface that
+would benefit from Vercel's function hosting. This also matches what Suno
+Cookbook actually ships (its CLAUDE.md says "Vercel" but its committed
+`.github/workflows/deploy.yml` deploys to GitHub Pages) - we just make the
+choice explicit here instead of leaving stale docs.
+
+## D3 - Stack: Vite + React 19 + TS, react-i18next (mirrors Suno Cookbook)
+
+Same rationale as Suno Cookbook: fast dev/build, first-class TS, tiny static
+output, i18next as the de-facto React i18n library with interpolation and
+locale fallback built in. Internal/technical choice, not put to a vote.
+
+## D4 - Five-locale content model, English + Turkish built first
+
+Locales: `en`, `tr`, `zh` (Simplified Chinese), `es`, `de`. English and
+Turkish are always complete; the other three are added in a later milestone
+and fall back to English until translated. Language set is evidence-based, not
+assumed - see Conversation.md Session 1 for the research. Findings: Chinese
+(Simplified) has the strongest grassroots CC-specific community (Bilibili
+tutorial ecosystem, unofficial localized builds, official site + UI support);
+Spanish has strong organic tutorial/course demand with no official Reallusion
+localization at all; German has official/institutional backing (localized
+site, office, UI language) but thinner grassroots content. Japanese and Korean
+were considered and rejected for this slot: despite an official Japanese UI
+and a Japan office, no meaningful Japanese CC-specific tutorial ecosystem was
+found - Japan's VTuber-model scene runs on VRoid/Live2D, not Character
+Creator. Turkish is included unconditionally regardless of community size,
+per the user's standing requirement.
+
+## D5 - Content sourcing, originality, and Official/Community labeling
+
+Content is compiled via research (official Reallusion sources first:
+reallusion.com, manual.reallusion.com, forum/magazine release notes; then
+reputable trade press and community sources for corroboration), but every
+entry is **written from scratch** - never copied or closely paraphrased from
+Reallusion's manual or marketing copy, in any of the five languages. Every
+entry carries an `official` flag (Official/Community badge): some CC5 details
+uncovered during research (exact internal system names, some parameter lists)
+were only press-paraphrased or community-reported, not confirmed on an
+official page - these are labeled Community/unverified rather than presented
+as fact, same model as Suno Cookbook's D5.
+
+## D6 - Best practices are skill-tiered, not a flat list
+
+Best Practices are split into Beginner / Intermediate / Expert categories,
+with many entries per tier. Rationale (user-requested): CC5's feature surface
+spans complete beginners (first character) through production-pipeline
+experts (multi-engine export, custom rigging), and a flat list would either
+overwhelm beginners or bore experts.
+
+## D7 - Scope includes CC5's closely-tied ecosystem, not CC5 alone
+
+CC5 is frequently used inseparably from iClone (animation), AccuRIG
+(rigging), ActorCore (content/motion marketplace) and various mocap devices.
+The cookbook covers these to the extent they connect to a CC5 workflow (e.g.
+exporting a CC5 character into iClone, ActorCore content licensing terms),
+rather than being an iClone or ActorCore manual in their own right.

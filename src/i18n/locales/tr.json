@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "CC5 Cookbook",
+    "tagline": "Character Creator 5 iş akışları, özellikleri ve en iyi pratikleri için bir başvuru rehberi"
+  },
+  "nav": {
+    "gettingStarted": "Başlarken",
+    "coreCreation": "Çekirdek Yaratım",
+    "riggingAnimation": "Rigging ve Animasyon",
+    "pipelineExport": "Pipeline ve Export",
+    "ecosystem": "Ekosistem",
+    "recipes": "Tarifler",
+    "bestPractices": "En İyi Pratikler",
+    "whatsNew": "CC5 vs CC4",
+    "glossary": "Sözlük",
+    "shortcuts": "Kısayollar ve Arayüz"
+  },
+  "skillLevel": {
+    "beginner": "Acemi",
+    "intermediate": "Orta Seviye",
+    "expert": "Uzman"
+  },
+  "badge": {
+    "official": "Resmi",
+    "community": "Topluluk"
+  },
+  "about": {
+    "notice": "Character Creator kullanan biri tarafından hazırlanmış, resmi olmayan, açık kaynaklı, kar amacı gütmeyen bir başvuru kaynağıdır. Reallusion ile bağlantılı veya onaylı değildir."
+  },
+  "status": {
+    "comingSoon": "Bu bölümün içeriği hazırlanıyor, yakında burada olacak."
+  },
+  "footer": {
+    "disclaimer": "Resmi olmayan bir başvuru kaynağıdır. Character Creator 5 her güncellemeyle değişebilir; güncel uygulamayla doğrulayın. Reallusion ile bağlantılı değildir.",
+    "trademark": "Character Creator, Reallusion Inc. şirketinin ticari markasıdır. MIT Lisansı altında yayınlanmıştır.",
+    "verified": "İçerik {{date}} tarihinde derlenmiştir."
+  },
+  "theme": {
+    "toggleToDark": "Karanlık mod",
+    "toggleToLight": "Aydınlık mod"
+  }
+}
