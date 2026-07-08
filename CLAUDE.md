@@ -101,8 +101,18 @@ npm run preview  # serve the production build
   written from scratch. 7 matching terms added to
   `src/data/glossary.ts`. No version-diff entries yet (nothing CC4-specific
   came up in this batch).
-- M3-M7 content (Rigging & Animation, Pipeline & Export, Ecosystem, Recipes,
-  Best Practices/remaining Glossary/Shortcuts), EN+TR: NOT STARTED.
+- M3 Rigging & Animation content: DONE. 6 `FeatureEntry` items in
+  `src/data/riggingAnimation.ts` (AccuRIG, Facial Profile/HD Facial Profile,
+  MetaHuman-Compatible Rig, Characterization & Motion Retargeting, Motion
+  Capture Compatibility, Smart Hair Physics), EN+TR, same research-from-
+  official-sources process as M2. "Motion+" from the original roadmap wording
+  turned out not to be an actual Reallusion product name (see Decisions.md
+  D9); it's covered instead by the Characterization/Retargeting and
+  MetaHuman-Compatible Rig entries. 7 matching terms added to
+  `src/data/glossary.ts` (now 13 total), including the
+  Standard/Humanoid/Creature classification flagged as a TODO after M2.
+- M4-M7 content (Pipeline & Export, Ecosystem, Recipes, Best
+  Practices/remaining Glossary/Shortcuts), EN+TR: NOT STARTED.
 - M8 UI (browse, search, category nav, skill-level filter, copy, language
   switch, theme): NOT STARTED.
 - M9 translation pass to zh/es/de: NOT STARTED.
@@ -110,11 +120,11 @@ npm run preview  # serve the production build
 
 ## Next step
 
-M3: write Rigging & Animation content (AccuRIG, Facial Profile/HD Facial
-Profile, Motion+/retargeting, mocap, physics for hair/cloth) as
-`FeatureEntry[]` in `src/data/riggingAnimation.ts`, EN+TR, same
-research-then-write-from-scratch process as M2 (Decisions.md D1/D5). Add
-matching glossary terms and version-diff entries as they come up; the
-Standard/Humanoid/Creature character classification mentioned in M2's HD Base
-Characters entry likely deserves a glossary term once rigging content
-provides fuller context for it.
+M4: write Pipeline & Export content (iClone interop, Unreal, Unity, Blender,
+Maya, 3ds Max, ZBrush, Substance Painter, Omniverse, file-format specifics)
+as `FeatureEntry[]` in `src/data/pipelineExport.ts`, EN+TR, same
+research-then-write-from-scratch process as M2/M3 (Decisions.md D1/D5). Note
+some export/interop ground was already touched in M2 (Soft Cloth's Marvelous
+Designer/Alembic path, AccuRIG's FBX/USD export) and M3 (MetaHuman Animator,
+Motion LIVE); M4 should link to or build on those rather than duplicate them.
+Add matching glossary terms and version-diff entries as they come up.

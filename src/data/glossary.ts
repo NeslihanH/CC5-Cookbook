@@ -75,4 +75,65 @@ export const glossaryTerms: GlossaryTerm[] = [
     },
     official: true,
   },
+  {
+    id: "glossary-character-classification",
+    category: "glossary",
+    term: "Standard / Humanoid / Creature",
+    definition: {
+      en: "Character Creator's three rig classifications. Standard characters match the reference skeleton and facial rig exactly, so they get full expression editing, swappable clothing and the shared iClone/ActorCore motion library; Humanoid characters are adapted enough to reuse standard motions but not to swap parts; Creature characters keep a fully custom skeleton with its own animations and no facial or part editing.",
+      tr: "Character Creator'ın üç rig sınıflandırması. Standard karakterler referans iskelet ve yüz rig'iyle birebir eşleşir, bu yüzden tam ifade düzenleme, değiştirilebilir kıyafet ve ortak iClone/ActorCore hareket kütüphanesine erişim kazanır; Humanoid karakterler standart hareketleri kullanacak kadar uyarlanmıştır ama parça değişimi desteklemez; Creature karakterler ise tamamen özel bir iskelet, kendi animasyonlarını korur ve yüz veya parça düzenlemesi almaz.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-accurig",
+    category: "glossary",
+    term: "AccuRIG",
+    definition: {
+      en: "Reallusion's automatic rigging engine, bundled with Character Creator and also available as a free standalone app, that estimates a working skeleton and skin weights on humanoid meshes.",
+      tr: "Reallusion'ın otomatik rigging motoru; Character Creator ile birlikte gelir ve ücretsiz bağımsız bir uygulama olarak da mevcuttur, insansı mesh'ler üzerinde çalışan bir iskelet ve deri ağırlığı tahmini yapar.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-hd-facial-profile",
+    category: "glossary",
+    term: "HD Facial Profile",
+    definition: {
+      en: "The expanded facial rig introduced with CC5, raising the standard Facial Profile's slider count from 160 to 390 (Facial Expression, Corrective Expression and non-linear sliders combined) for finer expression control.",
+      tr: "CC5 ile gelen genişletilmiş yüz rig'i; standart Facial Profile'ın kaydırıcı sayısını (Facial Expression, Corrective Expression ve doğrusal olmayan kaydırıcılar toplamında) 160'tan 390'a çıkararak daha ince ifade kontrolü sağlar.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-characterization",
+    category: "glossary",
+    term: "Characterization",
+    definition: {
+      en: "The process of mapping a character's bones onto Character Creator's reference skeleton so it can be classified as Standard or Humanoid and play back the shared motion library through retargeting.",
+      tr: "Bir karakterin kemiklerini Character Creator'ın referans iskeletine eşleyerek onu Standard veya Humanoid olarak sınıflandırma ve retargeting yoluyla ortak hareket kütüphanesini oynatabilir hale getirme işlemi.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-motion-live",
+    category: "glossary",
+    term: "Motion LIVE",
+    definition: {
+      en: "iClone's real-time motion capture plugin system, which streams body and facial data from Reallusion's own tools (like AccuFACE) or third-party devices onto a Standard-rigged character.",
+      tr: "iClone'un gerçek zamanlı motion capture eklenti sistemi; beden ve yüz verisini Reallusion'ın kendi araçlarından (AccuFACE gibi) veya üçüncü taraf cihazlardan Standard rigli bir karaktere akıtır.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-rlmotion",
+    category: "glossary",
+    term: "rlMotion",
+    aliases: [".rlMotion", "iMotionPlus", ".iMotionPlus"],
+    definition: {
+      en: "The current motion clip file format used across iClone and Character Creator; iMotionPlus is the variant that packages body motion together with facial and accessory data.",
+      tr: "iClone ve Character Creator genelinde kullanılan güncel hareket klibi dosya formatı; iMotionPlus ise beden hareketini yüz ve aksesuar verisiyle birlikte paketleyen varyantıdır.",
+    },
+    official: true,
+  },
 ];

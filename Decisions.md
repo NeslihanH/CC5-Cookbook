@@ -94,3 +94,18 @@ like inside the actual software - localizing it would make the cookbook
 harder to cross-reference against the app. One stub data file per category
 (all exporting empty arrays) is committed in M1 so the M2-M7 content
 milestones each touch one file instead of a monolith.
+
+## D9 - "Motion+" in the original roadmap wording was not an actual
+Reallusion product name
+
+CLAUDE.md's early M3 outline listed "Motion+/retargeting" as a topic to
+cover, carried over from initial planning notes. Researching M3 turned up no
+Reallusion product, panel or feature actually called "Motion+"; the real
+mechanisms are Characterization (mapping a custom rig onto Character
+Creator's reference skeleton), HumanIK-based motion retargeting, and CC5's
+new MetaHuman-compatible skeleton/facial rig. `riggingAnimation.ts` covers
+these as their own entries (`rig-characterization-retargeting`,
+`rig-metahuman-rig`) instead of forcing a "Motion+" entry that doesn't match
+anything in the app. Lesson for later milestones: treat roadmap topic labels
+in CLAUDE.md as pointers to research, not confirmed official terminology -
+verify the actual name before writing the entry.
