@@ -94,8 +94,15 @@ npm run preview  # serve the production build
 - M1 content schema/architecture: DONE. Types + one stub data file per
   category + aggregator (`src/data/content.ts`) + `useLocalized` hook. All
   data arrays are still empty - no CC5 content has been written yet.
-- M2-M7 content (Core Creation, Rigging & Animation, Pipeline & Export,
-  Ecosystem, Recipes, Best Practices/Glossary/Shortcuts), EN+TR: NOT STARTED.
+- M2 Core Creation content: DONE. 7 `FeatureEntry` items in
+  `src/data/coreCreation.ts` (HD Base Characters, HD Morphs, SkinGen, Smart
+  Hair, Soft Cloth, PBR Materials, Digital Human Shader), EN+TR, researched
+  from reallusion.com/manual.reallusion.com/magazine.reallusion.com and
+  written from scratch. 7 matching terms added to
+  `src/data/glossary.ts`. No version-diff entries yet (nothing CC4-specific
+  came up in this batch).
+- M3-M7 content (Rigging & Animation, Pipeline & Export, Ecosystem, Recipes,
+  Best Practices/remaining Glossary/Shortcuts), EN+TR: NOT STARTED.
 - M8 UI (browse, search, category nav, skill-level filter, copy, language
   switch, theme): NOT STARTED.
 - M9 translation pass to zh/es/de: NOT STARTED.
@@ -103,9 +110,11 @@ npm run preview  # serve the production build
 
 ## Next step
 
-M2: write the first real content batch - Core Creation (base characters, HD
-Morphs, SkinGen, Smart Hair, Smart Cloth, Materials/PBR, Digital Human
-Shader) as `FeatureEntry[]` in `src/data/coreCreation.ts`, EN+TR, using the
-research already gathered in `Conversation.md` but rewritten from scratch in
-our own words (Decisions.md D1/D5). Also add corresponding glossary terms and
-version-diff entries as they come up.
+M3: write Rigging & Animation content (AccuRIG, Facial Profile/HD Facial
+Profile, Motion+/retargeting, mocap, physics for hair/cloth) as
+`FeatureEntry[]` in `src/data/riggingAnimation.ts`, EN+TR, same
+research-then-write-from-scratch process as M2 (Decisions.md D1/D5). Add
+matching glossary terms and version-diff entries as they come up; the
+Standard/Humanoid/Creature character classification mentioned in M2's HD Base
+Characters entry likely deserves a glossary term once rigging content
+provides fuller context for it.
