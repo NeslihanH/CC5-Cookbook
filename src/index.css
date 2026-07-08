@@ -178,6 +178,18 @@ body {
 }
 .notice-text { line-height: 1.45; flex: 1; min-width: 160px; }
 
+.notice-github {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  color: var(--text-soft);
+  transition: color 0.15s, background 0.15s;
+}
+.notice-github:hover { color: var(--accent); background: var(--surface-2); }
+
 @media (min-width: 861px) {
   .notice-banner { margin-top: 16px; width: calc(100% - 40px); }
 }
