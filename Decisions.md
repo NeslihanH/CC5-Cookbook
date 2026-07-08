@@ -76,3 +76,21 @@ CC5 is frequently used inseparably from iClone (animation), AccuRIG
 The cookbook covers these to the extent they connect to a CC5 workflow (e.g.
 exporting a CC5 character into iClone, ActorCore content licensing terms),
 rather than being an iClone or ActorCore manual in their own right.
+
+## D8 - Content schema: one shared FeatureEntry type for the five topic
+categories, separate types for recipe/practice/glossary/shortcut/version-diff
+
+`Getting Started`, `Core Creation`, `Rigging & Animation`, `Pipeline &
+Export` and `Ecosystem` all browse the same way (a named feature/concept with
+a summary, a fuller explanation, and where to find it in the app), so they
+share one `FeatureEntry` type instead of five near-duplicate types - this
+mirrors Suno Cookbook's single `TagItem` type covering six of its nine
+categories. `Recipe`, `BestPractice`, `VersionDiffEntry`, `GlossaryTerm` and
+`Shortcut` have distinct shapes (ordered steps; skill tier; before/after
+diff; term+definition; key combo) so they stay separate types. Official
+Reallusion terminology (`FeatureEntry.name`, `GlossaryTerm.term`) is stored as
+a plain English string, never localized, because that's what the term looks
+like inside the actual software - localizing it would make the cookbook
+harder to cross-reference against the app. One stub data file per category
+(all exporting empty arrays) is committed in M1 so the M2-M7 content
+milestones each touch one file instead of a monolith.

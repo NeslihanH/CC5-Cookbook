@@ -54,15 +54,29 @@ vs Community per entry.
 
 ```
 src/
+  data/            content schema + datasets (one file per category)
+    types.ts       FeatureEntry / Recipe / BestPractice / VersionDiffEntry /
+                   GlossaryTerm / Shortcut / Category
+    gettingStarted.ts coreCreation.ts riggingAnimation.ts pipelineExport.ts
+    ecosystem.ts   (all FeatureEntry[], empty until M2-M5)
+    recipes.ts bestPractices.ts whatsNew.ts glossary.ts shortcuts.ts
+                   (empty until M6-M7)
+    content.ts     aggregator: categories, featureEntries, exports, totals
   i18n/            i18n config + locales/en.json, tr.json, zh.json, es.json, de.json
-  hooks/           useTheme (light/dark); useLocalized lands with the content schema
+  hooks/           useTheme (light/dark), useLocalized (locale picker with
+                   English fallback)
   App.tsx          current: placeholder shell (brand, language switch, theme,
-                   roadmap cards). Will grow into browse/search/category layout.
+                   roadmap cards). Will grow into browse/search/category layout
+                   in M8, once `src/data/` holds real content.
   main.tsx index.css
 ```
 
-`src/data/` (content schema + datasets) is designed in M1 and does not exist
-yet. Component breakout (`Header`, `CategoryNav`, cards, etc.) happens once
+Content datasets are localized per Decisions.md D4: prose fields are
+`Localized` (`en`/`tr` required, `zh`/`es`/`de` optional); official Reallusion
+terms (`FeatureEntry.name`, `GlossaryTerm.term`) stay plain English strings,
+same as Suno Cookbook keeps Suno tag literals in English.
+
+Component breakout (`Header`, `CategoryNav`, cards, etc.) happens in M8, once
 there is real content to render.
 
 ## How to run
@@ -77,7 +91,9 @@ npm run preview  # serve the production build
 ## Status
 
 - M0 scaffold + i18n + docs: DONE.
-- M1 content schema/architecture: NOT STARTED.
+- M1 content schema/architecture: DONE. Types + one stub data file per
+  category + aggregator (`src/data/content.ts`) + `useLocalized` hook. All
+  data arrays are still empty - no CC5 content has been written yet.
 - M2-M7 content (Core Creation, Rigging & Animation, Pipeline & Export,
   Ecosystem, Recipes, Best Practices/Glossary/Shortcuts), EN+TR: NOT STARTED.
 - M8 UI (browse, search, category nav, skill-level filter, copy, language
@@ -87,6 +103,9 @@ npm run preview  # serve the production build
 
 ## Next step
 
-M1: design the content schema (types for Feature, Recipe, BestPractice with
-skill level, GlossaryTerm, Shortcut, VersionDiff entry) and the final category
-tree, using the research already gathered in `Conversation.md`.
+M2: write the first real content batch - Core Creation (base characters, HD
+Morphs, SkinGen, Smart Hair, Smart Cloth, Materials/PBR, Digital Human
+Shader) as `FeatureEntry[]` in `src/data/coreCreation.ts`, EN+TR, using the
+research already gathered in `Conversation.md` but rewritten from scratch in
+our own words (Decisions.md D1/D5). Also add corresponding glossary terms and
+version-diff entries as they come up.
