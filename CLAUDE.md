@@ -106,9 +106,10 @@ npm run preview  # serve the production build
   MetaHuman-Compatible Rig, Characterization & Motion Retargeting, Motion
   Capture Compatibility, Smart Hair Physics), EN+TR, same research-from-
   official-sources process as M2. "Motion+" from the original roadmap wording
-  turned out not to be an actual Reallusion product name (see Decisions.md
-  D9); it's covered instead by the Characterization/Retargeting and
-  MetaHuman-Compatible Rig entries. 7 matching terms added to
+  is not a CC5 rigging mechanism; it turned out to be a real ActorCore
+  content format, covered in M5 instead (see Decisions.md D9, corrected).
+  M3's rigging/retargeting ground is covered by the Characterization/
+  Retargeting and MetaHuman-Compatible Rig entries. 7 matching terms added to
   `src/data/glossary.ts` (now 13 total), including the
   Standard/Humanoid/Creature classification flagged as a TODO after M2.
 - M4 Pipeline & Export content: DONE. 8 `FeatureEntry` items in
@@ -119,19 +120,38 @@ npm run preview  # serve the production build
   project format rather than going through an export pipeline, so it fits
   Ecosystem/M5 better). 4 matching terms added to `src/data/glossary.ts`
   (now 17 total): Auto Setup, GoZ, UDIM, USD.
-- M5-M7 content (Ecosystem, Recipes, Best Practices/remaining
-  Glossary/Shortcuts), EN+TR: NOT STARTED.
+- M5 Ecosystem content: DONE. 5 `FeatureEntry` items in
+  `src/data/ecosystem.ts` (iClone Interoperability, ActorCore, Content
+  Store, Reallusion Hub, Licensing Tiers), EN+TR, same
+  research-from-official-sources process as M2-M4, scoped per Decisions.md
+  D7 (ecosystem tools covered only to the extent they connect to a CC5
+  workflow). AccuRIG was not repeated here since it already has its own
+  entry in Rigging & Animation (M3). Found and corrected a factual error
+  from M3: "Motion+" is a real ActorCore motion format (see Decisions.md D9,
+  corrected), now documented in the ActorCore entry and the `rlMotion`
+  glossary term. Licensing Tiers deliberately avoids stating exact prices
+  (they change and weren't independently confirmed on reallusion.com),
+  describing the iContent/Standard and perpetual/365 structure instead. 4
+  matching terms added to `src/data/glossary.ts` (now 21 total): ActorCore,
+  Content Store, Reallusion Hub, iContent License.
+- M6-M7 content (Recipes, Best Practices/remaining Glossary/Shortcuts),
+  EN+TR: NOT STARTED.
 - M8 UI (browse, search, category nav, skill-level filter, copy, language
-  switch, theme): NOT STARTED.
+  switch, theme): NOT STARTED. Note from mid-M5: the user checked the local
+  dev server and (correctly) couldn't see any of the M2-M5 content yet -
+  `App.tsx` still only renders the M0 placeholder roadmap cards and never
+  reads `src/data/content.ts`. This is expected per the M8 plan, not a bug;
+  confirmed with the user to keep writing M6-M7 content first rather than
+  build an early preview UI.
 - M9 translation pass to zh/es/de: NOT STARTED.
 - M10 polish + trademark/English audit + deploy: NOT STARTED.
 
 ## Next step
 
-M5: write Ecosystem content (Content Store, Marketplace, ActorCore, iClone
-interop, Reallusion Hub, plugins, licensing tiers) as `FeatureEntry[]` in
-`src/data/ecosystem.ts`, EN+TR, same research-then-write-from-scratch process
-as M2-M4 (Decisions.md D1/D5, D7 for scope: cover ecosystem tools only to the
-extent they connect to a CC5 workflow, not as standalone iClone/ActorCore
-manuals). Add matching glossary terms and version-diff entries as they come
-up.
+M6: write Recipes content (end-to-end step-by-step workflows, e.g. "scratch
+to Unreal-ready character") as `Recipe[]` in `src/data/recipes.ts`, EN+TR.
+Recipes should link the pieces already documented in M2-M5 into ordered
+workflows rather than re-explain them (e.g. a recipe can say "apply Soft
+Cloth physics" and rely on that entry for the how/why). Then M7: Best
+Practices (skill-tiered tips), remaining Glossary terms, and Shortcuts. Add
+version-diff entries as they come up.

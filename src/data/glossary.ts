@@ -129,10 +129,10 @@ export const glossaryTerms: GlossaryTerm[] = [
     id: "glossary-rlmotion",
     category: "glossary",
     term: "rlMotion",
-    aliases: [".rlMotion", "iMotionPlus", ".iMotionPlus"],
+    aliases: [".rlMotion", "iMotionPlus", ".iMotionPlus", "Motion+", "Motion Plus"],
     definition: {
-      en: "The current motion clip file format used across iClone and Character Creator; iMotionPlus is the variant that packages body motion together with facial and accessory data.",
-      tr: "iClone ve Character Creator genelinde kullanılan güncel hareket klibi dosya formatı; iMotionPlus ise beden hareketini yüz ve aksesuar verisiyle birlikte paketleyen varyantıdır.",
+      en: "The current motion clip file format used across iClone and Character Creator; iMotionPlus is the variant that packages body motion together with facial and accessory data, sold under the Motion+ branding in the ActorCore Motion Store.",
+      tr: "iClone ve Character Creator genelinde kullanılan güncel hareket klibi dosya formatı; iMotionPlus, beden hareketini yüz ve aksesuar verisiyle birlikte paketleyen ve ActorCore Motion Store'da Motion+ markasıyla satılan varyantıdır.",
     },
     official: true,
   },
@@ -175,6 +175,46 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Universal Scene Description, NVIDIA Omniverse's native interchange format; Character Creator can export characters as USD alongside its regular FBX pipeline.",
       tr: "NVIDIA Omniverse'in yerel değişim formatı olan Universal Scene Description; Character Creator, normal FBX hattının yanı sıra karakterleri USD olarak da dışa aktarabilir.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-actorcore",
+    category: "glossary",
+    term: "ActorCore",
+    definition: {
+      en: "Reallusion's browser-based marketplace for themed mocap motion packs and fully rigged, facially consistent characters, exported as FBX for use across most major 3D tools.",
+      tr: "Reallusion'ın temalı mocap hareket paketleri ile tam riglenmiş, yüz açısından tutarlı karakterler için tarayıcı tabanlı pazaryeri; çoğu büyük 3D araçta kullanmak üzere FBX olarak dışa aktarılır.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-content-store",
+    category: "glossary",
+    term: "Content Store",
+    definition: {
+      en: "Reallusion's general 2D/3D asset marketplace for morphs, skin/makeup, hair, cloth, props and plugins, distinct from ActorCore's character-and-motion focus.",
+      tr: "ActorCore'un karakter ve hareket odağından ayrı olarak, morflar, cilt/makyaj, saç, kıyafet, prop ve eklentiler için Reallusion'ın genel 2D/3D varlık pazaryeri.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-reallusion-hub",
+    category: "glossary",
+    term: "Reallusion Hub",
+    definition: {
+      en: "A standalone manager app that installs, updates and launches Character Creator, iClone and their plugins in one place.",
+      tr: "Character Creator'ı, iClone'u ve eklentilerini tek yerden kurup güncelleyen ve başlatan, bağımsız bir yönetici uygulama.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-icontent-license",
+    category: "glossary",
+    term: "iContent License",
+    definition: {
+      en: "A reduced-cost content license covering internal use only (rendering inside iClone/Character Creator, previsualization, education, concept work); it does not permit exporting the content to external engines or DCCs, which requires a Standard License instead.",
+      tr: "Yalnızca dahili kullanımı (iClone/Character Creator içinde render, ön görselleştirme, eğitim, konsept çalışması) kapsayan, indirimli bir içerik lisansı; içeriği harici motorlara veya DCC'lere dışa aktarmaya izin vermez, bunun için Standard Lisans gerekir.",
     },
     official: true,
   },

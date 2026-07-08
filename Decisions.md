@@ -95,17 +95,21 @@ harder to cross-reference against the app. One stub data file per category
 (all exporting empty arrays) is committed in M1 so the M2-M7 content
 milestones each touch one file instead of a monolith.
 
-## D9 - "Motion+" in the original roadmap wording was not an actual
-Reallusion product name
+## D9 (corrected in M5) - "Motion+" is a real ActorCore product, but an
+Ecosystem/content topic, not a Rigging & Animation mechanism
 
 CLAUDE.md's early M3 outline listed "Motion+/retargeting" as a topic to
-cover, carried over from initial planning notes. Researching M3 turned up no
-Reallusion product, panel or feature actually called "Motion+"; the real
-mechanisms are Characterization (mapping a custom rig onto Character
-Creator's reference skeleton), HumanIK-based motion retargeting, and CC5's
-new MetaHuman-compatible skeleton/facial rig. `riggingAnimation.ts` covers
-these as their own entries (`rig-characterization-retargeting`,
-`rig-metahuman-rig`) instead of forcing a "Motion+" entry that doesn't match
-anything in the app. Lesson for later milestones: treat roadmap topic labels
-in CLAUDE.md as pointers to research, not confirmed official terminology -
-verify the actual name before writing the entry.
+cover. M3's research found no CC5 rigging feature called "Motion+" and
+concluded (wrongly) that the name did not exist at all; M3 covered the real
+rigging mechanisms instead (Characterization, HumanIK-based retargeting,
+CC5's MetaHuman-compatible skeleton), which was the right content call, but
+the "does not exist" claim was wrong. M5 research turned up Motion+ (Motion
+Plus): a real ActorCore Motion Store format that bundles body motion with
+facial animation (and optionally paired props) in one asset, corresponding
+to the `.iMotionPlus` file already documented in the `rlMotion` glossary
+entry. It belongs with ActorCore/Ecosystem content, not CC5's own rigging
+mechanics, since it is a purchasable motion asset format rather than
+something CC5 itself does. Lesson for later milestones: "no feature by this
+name in the area I searched" is not the same as "this name does not exist in
+the product" - a name search must cover the wider Reallusion ecosystem
+(ActorCore, iClone) before concluding a roadmap term is a misnomer.
