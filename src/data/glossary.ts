@@ -136,4 +136,46 @@ export const glossaryTerms: GlossaryTerm[] = [
     },
     official: true,
   },
+  {
+    id: "glossary-auto-setup",
+    category: "glossary",
+    term: "Auto Setup",
+    definition: {
+      en: "Reallusion's family of free one-click plugins (for Unreal Engine, Unity, Blender, Maya and 3ds Max) that bring a CC5/iClone character into another tool with materials, rig and (where relevant) motion already converted, instead of a plain FBX round trip.",
+      tr: "Reallusion'ın ücretsiz, tek tıkla çalışan eklenti ailesi (Unreal Engine, Unity, Blender, Maya ve 3ds Max için); bir CC5/iClone karakterini düz bir FBX turu yerine materyalleri, rig'i ve (ilgiliyse) hareketi önceden dönüştürülmüş halde başka bir araca getirir.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-goz",
+    category: "glossary",
+    term: "GoZ",
+    aliases: ["GoZ+"],
+    definition: {
+      en: "Pixologic's cross-application round-trip protocol; Character Creator's GoZ bridge uses it to send a character to ZBrush and back while keeping morphs, textures, clothing, hair and accessories in sync.",
+      tr: "Pixologic'in uygulamalar arası gidiş-dönüş protokolü; Character Creator'ın GoZ köprüsü, bir karakteri ZBrush'a gönderip geri getirirken morfları, dokuları, kıyafeti, saçı ve aksesuarları senkronize tutmak için bunu kullanır.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-udim",
+    category: "glossary",
+    term: "UDIM",
+    definition: {
+      en: "A UV tiling convention that lays a character's texture space across multiple numbered tiles instead of one 0-1 square, used by Character Creator's Substance Painter bridge so each body part can be painted at full resolution.",
+      tr: "Bir karakterin doku alanını tek bir 0-1 karesi yerine numaralandırılmış birden çok parçaya yayan bir UV döşeme kuralı; Character Creator'ın Substance Painter köprüsü bunu, her vücut bölümünün tam çözünürlükte boyanabilmesi için kullanır.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-usd",
+    category: "glossary",
+    term: "USD",
+    aliases: ["Universal Scene Description"],
+    definition: {
+      en: "Universal Scene Description, NVIDIA Omniverse's native interchange format; Character Creator can export characters as USD alongside its regular FBX pipeline.",
+      tr: "NVIDIA Omniverse'in yerel değişim formatı olan Universal Scene Description; Character Creator, normal FBX hattının yanı sıra karakterleri USD olarak da dışa aktarabilir.",
+    },
+    official: true,
+  },
 ];

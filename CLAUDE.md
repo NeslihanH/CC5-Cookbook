@@ -111,8 +111,16 @@ npm run preview  # serve the production build
   MetaHuman-Compatible Rig entries. 7 matching terms added to
   `src/data/glossary.ts` (now 13 total), including the
   Standard/Humanoid/Creature classification flagged as a TODO after M2.
-- M4-M7 content (Pipeline & Export, Ecosystem, Recipes, Best
-  Practices/remaining Glossary/Shortcuts), EN+TR: NOT STARTED.
+- M4 Pipeline & Export content: DONE. 8 `FeatureEntry` items in
+  `src/data/pipelineExport.ts` (Auto Setup for Unreal Engine/Unity/Blender/
+  Maya & 3ds Max, ZBrush GoZ Bridge, Substance Painter Bridge, Omniverse/USD
+  Pipeline, FBX Export), EN+TR, same research-from-official-sources process
+  as M2/M3. Close iClone interop was deliberately left out (it shares CC5's
+  project format rather than going through an export pipeline, so it fits
+  Ecosystem/M5 better). 4 matching terms added to `src/data/glossary.ts`
+  (now 17 total): Auto Setup, GoZ, UDIM, USD.
+- M5-M7 content (Ecosystem, Recipes, Best Practices/remaining
+  Glossary/Shortcuts), EN+TR: NOT STARTED.
 - M8 UI (browse, search, category nav, skill-level filter, copy, language
   switch, theme): NOT STARTED.
 - M9 translation pass to zh/es/de: NOT STARTED.
@@ -120,11 +128,10 @@ npm run preview  # serve the production build
 
 ## Next step
 
-M4: write Pipeline & Export content (iClone interop, Unreal, Unity, Blender,
-Maya, 3ds Max, ZBrush, Substance Painter, Omniverse, file-format specifics)
-as `FeatureEntry[]` in `src/data/pipelineExport.ts`, EN+TR, same
-research-then-write-from-scratch process as M2/M3 (Decisions.md D1/D5). Note
-some export/interop ground was already touched in M2 (Soft Cloth's Marvelous
-Designer/Alembic path, AccuRIG's FBX/USD export) and M3 (MetaHuman Animator,
-Motion LIVE); M4 should link to or build on those rather than duplicate them.
-Add matching glossary terms and version-diff entries as they come up.
+M5: write Ecosystem content (Content Store, Marketplace, ActorCore, iClone
+interop, Reallusion Hub, plugins, licensing tiers) as `FeatureEntry[]` in
+`src/data/ecosystem.ts`, EN+TR, same research-then-write-from-scratch process
+as M2-M4 (Decisions.md D1/D5, D7 for scope: cover ecosystem tools only to the
+extent they connect to a CC5 workflow, not as standalone iClone/ActorCore
+manuals). Add matching glossary terms and version-diff entries as they come
+up.
