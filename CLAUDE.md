@@ -134,11 +134,17 @@ npm run preview  # serve the production build
   describing the iContent/Standard and perpetual/365 structure instead. 4
   matching terms added to `src/data/glossary.ts` (now 21 total): ActorCore,
   Content Store, Reallusion Hub, iContent License.
-- M6-M7 content (Recipes, Best Practices/remaining Glossary/Shortcuts),
-  EN+TR: NOT STARTED.
+- M6 Recipes content: DONE. 6 `Recipe` items in `src/data/recipes.ts` (Base
+  Character to Unreal-Ready Character, ZBrush Sculpt Round Trip, Auto-Rigging
+  a Custom/Scanned Model, Cloth Physics Setup, Facial Mocap Capture & Reuse,
+  Substance Painter Texturing), EN+TR. No new research: each recipe links
+  entries already documented in M2-M5 into an ordered sequence rather than
+  re-explaining them, per the plan below.
+- M7 content (Best Practices, remaining Glossary terms, Shortcuts), EN+TR:
+  NOT STARTED.
 - M8 UI (browse, search, category nav, skill-level filter, copy, language
   switch, theme): NOT STARTED. Note from mid-M5: the user checked the local
-  dev server and (correctly) couldn't see any of the M2-M5 content yet -
+  dev server and (correctly) couldn't see any of the M2-M6 content yet -
   `App.tsx` still only renders the M0 placeholder roadmap cards and never
   reads `src/data/content.ts`. This is expected per the M8 plan, not a bug;
   confirmed with the user to keep writing M6-M7 content first rather than
@@ -148,10 +154,11 @@ npm run preview  # serve the production build
 
 ## Next step
 
-M6: write Recipes content (end-to-end step-by-step workflows, e.g. "scratch
-to Unreal-ready character") as `Recipe[]` in `src/data/recipes.ts`, EN+TR.
-Recipes should link the pieces already documented in M2-M5 into ordered
-workflows rather than re-explain them (e.g. a recipe can say "apply Soft
-Cloth physics" and rely on that entry for the how/why). Then M7: Best
-Practices (skill-tiered tips), remaining Glossary terms, and Shortcuts. Add
-version-diff entries as they come up.
+M7: write Best Practices (skill-tiered tips: Beginner/Intermediate/Expert,
+`BestPractice[]` in `src/data/bestPractices.ts`), remaining Glossary terms
+(`src/data/glossary.ts` already has 21 from M2-M5; fill gaps rather than
+duplicate), and Shortcuts (`Shortcut[]` in `src/data/shortcuts.ts`, key
+combos and UI reference), EN+TR. Add version-diff (CC5 vs CC4) entries as
+they come up - none exist yet in `src/data/whatsNew.ts`, so M7 is also a
+good point to check whether any M2-M6 content surfaced a genuine CC4-vs-CC5
+change worth recording there.
