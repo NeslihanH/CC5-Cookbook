@@ -218,4 +218,64 @@ export const glossaryTerms: GlossaryTerm[] = [
     },
     official: true,
   },
+  {
+    id: "glossary-standard-license",
+    category: "glossary",
+    term: "Standard License",
+    definition: {
+      en: "The Reallusion content license that permits exporting a purchased asset to external engines and DCCs (Unreal, Unity, Blender, Maya and others) and using it across unlimited projects; the iContent License covers internal use only.",
+      tr: "Satın alınan bir varlığı harici motorlara ve DCC'lere (Unreal, Unity, Blender, Maya ve diğerleri) dışa aktarmaya ve sınırsız projede kullanmaya izin veren Reallusion içerik lisansı; iContent Lisansı yalnızca dahili kullanımı kapsar.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-content-manager",
+    category: "glossary",
+    term: "Content Manager",
+    definition: {
+      en: "Character Creator's built-in browser for characters, hair, clothes, props and other assets, including an online tab for signed-in Content Store and ActorCore purchases.",
+      tr: "Character Creator'ın karakterler, saç, kıyafet, prop ve diğer varlıklar için yerleşik tarayıcısı; giriş yapıldığında Content Store ve ActorCore satın alımları için bir online sekmesi de içerir.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-modify-panel",
+    category: "glossary",
+    term: "Modify Panel",
+    definition: {
+      en: "Character Creator's main contextual editing panel; its tabs and sections change based on what is selected (a character, a garment, a hair object, a material) and host most of the tools described throughout this cookbook.",
+      tr: "Character Creator'ın ana bağlamsal düzenleme paneli; sekmeleri ve bölümleri neyin seçili olduğuna göre (bir karakter, bir kıyafet, bir saç nesnesi, bir materyal) değişir ve bu cookbook boyunca anlatılan araçların çoğunu barındırır.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-control-rig",
+    category: "glossary",
+    term: "Control Rig",
+    definition: {
+      en: "An animator-friendly rig (as opposed to the underlying skeleton) that Auto Setup plugins build automatically in the destination DCC or engine, so a CC5 character can be posed without hand-rigging control curves.",
+      tr: "Auto Setup eklentilerinin hedef DCC veya motorda otomatik olarak kurduğu, alttaki iskeletin aksine animatöre yönelik bir rig; bu sayede bir CC5 karakteri kontrol eğrilerini elle riglemeden pozlanabilir.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-live-link",
+    category: "glossary",
+    term: "Live Link",
+    definition: {
+      en: "Unreal Engine's real-time data-streaming connection; iClone's Unreal Live Link plugin uses it to update a character's motion in Unreal live as it changes in Character Creator or iClone, and to keep both apps synced by timecode.",
+      tr: "Unreal Engine'in gerçek zamanlı veri akışı bağlantısı; iClone'un Unreal Live Link eklentisi bunu, Character Creator veya iClone'da değişen bir karakterin hareketini Unreal'de canlı olarak güncellemek ve iki uygulamayı timecode ile senkron tutmak için kullanır.",
+    },
+    official: true,
+  },
+  {
+    id: "glossary-metahuman-animator",
+    category: "glossary",
+    term: "MetaHuman Animator",
+    definition: {
+      en: "Unreal Engine's high-end facial capture and solving tool; CC5 characters can use it directly because they share MetaHuman's skeleton and facial control structure.",
+      tr: "Unreal Engine'in üst seviye yüz yakalama ve çözümleme aracı; CC5 karakterleri MetaHuman'ın iskeletini ve yüz kontrol yapısını paylaştığı için bunu doğrudan kullanabilir.",
+    },
+    official: true,
+  },
 ];

@@ -140,25 +140,45 @@ npm run preview  # serve the production build
   Substance Painter Texturing), EN+TR. No new research: each recipe links
   entries already documented in M2-M5 into an ordered sequence rather than
   re-explaining them, per the plan below.
-- M7 content (Best Practices, remaining Glossary terms, Shortcuts), EN+TR:
-  NOT STARTED.
+- M7 content: DONE. 9 `BestPractice` items in `src/data/bestPractices.ts`
+  (3 Beginner / 3 Intermediate / 3 Expert, building on facts already
+  verified in M2-M6, no new research); 13 `Shortcut` items in
+  `src/data/shortcuts.ts`, sourced from the CC5 manual's General Toolbar and
+  Editor Mode Shortcuts pages (kept to unambiguous, general-purpose keys -
+  several panel-specific single-letter shortcuts that meant different things
+  per Modify panel tab were left out rather than risk stating them wrong); 6
+  more glossary terms added (Standard License, Content Manager, Modify
+  Panel, Control Rig, Live Link, MetaHuman Animator - now 27 total); and 2
+  `VersionDiffEntry` items in `src/data/whatsNew.ts` (HD Facial Profile's
+  160-to-390 slider expansion, MetaHuman-compatible skeleton), the only two
+  CC4-vs-CC5 differences confirmed against official launch materials -
+  plausible-sounding comparisons that weren't independently verified were
+  left out. **This closes out the M2-M7 content phase**: all six data files
+  (`coreCreation`, `riggingAnimation`, `pipelineExport`, `ecosystem`,
+  `recipes`, `bestPractices`) plus `glossary`, `shortcuts` and `whatsNew` now
+  hold real, EN+TR, research-backed content - 83 entries total via
+  `totalEntries` in `src/data/content.ts`.
 - M8 UI (browse, search, category nav, skill-level filter, copy, language
   switch, theme): NOT STARTED. Note from mid-M5: the user checked the local
-  dev server and (correctly) couldn't see any of the M2-M6 content yet -
+  dev server and (correctly) couldn't see any of the content written so far -
   `App.tsx` still only renders the M0 placeholder roadmap cards and never
   reads `src/data/content.ts`. This is expected per the M8 plan, not a bug;
   confirmed with the user to keep writing M6-M7 content first rather than
-  build an early preview UI.
+  build an early preview UI. Now that M2-M7 are done, M8 is what makes all
+  of it visible.
 - M9 translation pass to zh/es/de: NOT STARTED.
 - M10 polish + trademark/English audit + deploy: NOT STARTED.
 
 ## Next step
 
-M7: write Best Practices (skill-tiered tips: Beginner/Intermediate/Expert,
-`BestPractice[]` in `src/data/bestPractices.ts`), remaining Glossary terms
-(`src/data/glossary.ts` already has 21 from M2-M5; fill gaps rather than
-duplicate), and Shortcuts (`Shortcut[]` in `src/data/shortcuts.ts`, key
-combos and UI reference), EN+TR. Add version-diff (CC5 vs CC4) entries as
-they come up - none exist yet in `src/data/whatsNew.ts`, so M7 is also a
-good point to check whether any M2-M6 content surfaced a genuine CC4-vs-CC5
-change worth recording there.
+M8: build the real browse/search UI in `App.tsx` (and break it into
+components - `Header`, `CategoryNav`, cards per content type - per the
+"Component breakout" note above). Needs: category navigation over
+`categories` from `src/data/content.ts`, card rendering for each of the 6
+`ContentItem` shapes (`FeatureEntry`, `Recipe`, `BestPractice`,
+`VersionDiffEntry`, `GlossaryTerm`, `Shortcut`), client-side diacritic-
+insensitive search per the repo layout notes, a skill-level filter for Best
+Practices, Official/Community badges (`badge.official`/`badge.community`
+keys already exist in the locale files), and `useLocalized` (already built
+in M1) wired into every card. Existing theme/language switch and the M0
+notice banner should carry over largely as-is.
