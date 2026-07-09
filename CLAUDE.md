@@ -218,8 +218,12 @@ npm run preview  # serve the production build
   88 entries confirmed to have non-empty `zh`/`es`/`de` on every `Localized`
   field (script-checked, not sampled), zero duplicate `id`s, and `en`/`tr`
   text content byte-identical to the pre-M9 commit.
-- M10 polish + trademark/English audit + deploy: CODE DONE, deploy pending
-  a manual repo setting + push (see Next step). Audits all passed:
+- M10 polish + trademark/English audit + deploy: DONE. The site is LIVE at
+  https://neslihanh.github.io/CC5-Cookbook/ (HTTP 200, verified headless:
+  German/Chinese locales and multiple categories render, JS/CSS/favicon all
+  load, zero console errors, zero failed requests). The owner enabled Pages
+  with "GitHub Actions" as source, which was the only remaining blocker; the
+  workflow then deployed green with no code change. Audits all passed:
   - Trademark: the "unofficial / not affiliated / not endorsed by
     Reallusion" disclaimer plus the "Character Creator is a trademark of
     Reallusion Inc." attribution are present and correct in all 5 languages
@@ -250,23 +254,25 @@ npm run preview  # serve the production build
 
 ## Next step
 
-`main` (all of M1-M10) is now PUSHED to origin. The deploy workflow ran on
-that push (run 28988435174) and confirmed the diagnosis precisely:
-- **build job: success** - `npm ci`, `npm run build`, and
-  `upload-pages-artifact` all passed. The deployable artifact is good.
-- **deploy job: failure** at `actions/deploy-pages@v4` - the signature of
-  "GitHub Pages is not enabled with GitHub Actions as the source." (The
-  earlier M0 push failed the same way; that's why the site is 404.)
+M0-M10 are all DONE and the site is live. The initial build-out is complete:
+88 research-backed entries across 10 categories, EN+TR+ZH+ES+DE, with a
+browse/search/filter UI, deployed to GitHub Pages via `deploy.yml` on every
+push to `main`.
 
-So the code, workflow, and build are all correct and done. The ONE remaining
-blocker is a manual repo setting only the owner can flip:
+There is no committed "M11". Future work, when the user wants it, would be
+new content or maintenance rather than a fixed roadmap - likely candidates:
+- Keeping content current as Character Creator updates ship (the footer
+  already tells readers to verify against the live app; `compiledDate` in
+  `src/data/content.ts` is the "as of" marker to bump).
+- Growing thin categories (Getting Started and What's New are deliberately
+  small; more version-diff entries especially could be added as more
+  official CC4-vs-CC5 differences are confirmed - see Decisions.md, only
+  independently verified diffs go in).
+- Any UX additions (deep-linking to a category/entry, copy-to-clipboard,
+  etc.) if desired; none are committed yet.
 
-**Enable Pages:** github.com/NeslihanH/CC5-Cookbook -> Settings -> Pages ->
-Build and deployment -> Source: **GitHub Actions**. Then re-run the failed
-workflow (Actions tab -> the failed run -> "Re-run failed jobs") or push any
-commit / use "Run workflow" (workflow_dispatch is enabled). No code change is
-needed - do NOT try to "fix" `deploy.yml`, it is already correct.
-
-After it deploys green, verify https://neslihanh.github.io/CC5-Cookbook/
-renders (not 404) and spot-check a couple of languages/categories on the
-real Pages host. That completes M10 and the project's initial build-out.
+When resuming for new content, follow the same loop every prior milestone
+used: research from official Reallusion sources, write from scratch in our
+own words per Decisions.md D1/D5, add EN+TR then the other three locales,
+run build/lint + the data sanity check, and verify (including the
+translation-orthography grep from M9) before committing.
