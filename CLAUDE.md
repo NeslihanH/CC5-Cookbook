@@ -250,21 +250,23 @@ npm run preview  # serve the production build
 
 ## Next step
 
-Deploy is the only thing left, and it needs two things that must be done by
-the repo owner, not automatable from here:
-1. **Enable GitHub Pages with "GitHub Actions" as the source** in the repo
-   settings (github.com/NeslihanH/CC5-Cookbook -> Settings -> Pages ->
-   Build and deployment -> Source: GitHub Actions). As of M10 the site at
-   https://neslihanh.github.io/CC5-Cookbook/ returns 404, meaning Pages has
-   not been deployed yet. The `.github/workflows/deploy.yml` (scaffolded in
-   M0) is correct and will handle build+deploy once Pages is enabled.
-2. **Push `main` to origin.** All of M1-M10 is committed locally but NOT yet
-   pushed (origin still only has the M0 scaffold commit). Pushing to this
-   public repo triggers `deploy.yml`, which builds and publishes the site.
-   This is an outward-facing action (makes the site public), so confirm with
-   the user before pushing.
+`main` (all of M1-M10) is now PUSHED to origin. The deploy workflow ran on
+that push (run 28988435174) and confirmed the diagnosis precisely:
+- **build job: success** - `npm ci`, `npm run build`, and
+  `upload-pages-artifact` all passed. The deployable artifact is good.
+- **deploy job: failure** at `actions/deploy-pages@v4` - the signature of
+  "GitHub Pages is not enabled with GitHub Actions as the source." (The
+  earlier M0 push failed the same way; that's why the site is 404.)
 
-After the first successful deploy, verify the live URL renders (not 404) and
-spot-check a couple of languages/categories on the real Pages host. If the
-site 404s after a green workflow run, the Pages source setting (step 1) is
-the usual culprit.
+So the code, workflow, and build are all correct and done. The ONE remaining
+blocker is a manual repo setting only the owner can flip:
+
+**Enable Pages:** github.com/NeslihanH/CC5-Cookbook -> Settings -> Pages ->
+Build and deployment -> Source: **GitHub Actions**. Then re-run the failed
+workflow (Actions tab -> the failed run -> "Re-run failed jobs") or push any
+commit / use "Run workflow" (workflow_dispatch is enabled). No code change is
+needed - do NOT try to "fix" `deploy.yml`, it is already correct.
+
+After it deploys green, verify https://neslihanh.github.io/CC5-Cookbook/
+renders (not 404) and spot-check a couple of languages/categories on the
+real Pages host. That completes M10 and the project's initial build-out.
