@@ -2,13 +2,15 @@
 
 > A field guide to Character Creator 5 workflows, features and best practices.
 
+**🌐 Live site: [neslihanh.github.io/CC5-Cookbook](https://neslihanh.github.io/CC5-Cookbook/)**
+
 An unofficial, open-source, non-profit project - not affiliated with or endorsed by Reallusion.
 
 ## What's inside
 
 - **Getting Started** - installation, licensing, system requirements, first character
-- **Core Creation** - HD Morphs, SkinGen, Smart Hair, Smart Cloth, Materials & PBR
-- **Rigging & Animation** - AccuRIG, Facial Profiles, Motion+, motion capture
+- **Core Creation** - HD Morphs, SkinGen, Smart Hair, Soft Cloth, Materials & PBR
+- **Rigging & Animation** - AccuRIG, Facial Profiles, MetaHuman-compatible rig, retargeting, motion capture
 - **Pipeline & Export** - Unreal, Unity, Blender, Maya, ZBrush, Substance Painter, iClone, Omniverse
 - **Ecosystem** - Content Store, Marketplace, ActorCore, plugins, licensing
 - **Recipes** - ready-to-follow, step-by-step workflows
@@ -24,4 +26,5 @@ All content is written in our own words from independently researched, cited sou
 
 Found a bug, have a suggestion, or want to contribute?
 
+[![GitHub](https://img.shields.io/badge/GitHub-NeslihanH-181717?style=flat&logo=github)](https://github.com/NeslihanH)
 [![Email](https://img.shields.io/badge/Email-neslihan.hamali@gmail.com-blue?style=flat&logo=gmail)](mailto:neslihan.hamali@gmail.com)
