@@ -63,7 +63,7 @@ src/
     recipes.ts bestPractices.ts whatsNew.ts glossary.ts shortcuts.ts
                    (filled M6-M7: 6/9/2/27/13 entries)
     content.ts     aggregator: categories, featureEntries, exports, totals
-                   (88 entries via `totalEntries`)
+                   (97 entries via `totalEntries`)
   i18n/            i18n config + locales/en.json, tr.json, zh.json, es.json, de.json
   hooks/           useTheme (light/dark), useLocalized (locale picker with
                    English fallback)
@@ -257,27 +257,48 @@ npm run preview  # serve the production build
     real content renders, category switch works, zero console errors, zero
     failed asset requests. This is the exact artifact GH Pages will serve.
 
+## Post-launch enhancements (all DONE and live)
+
+After M10 shipped, several polish/expansion passes landed (all pushed and
+deployed):
+- **UI redesign**: category nav moved from a horizontal pill row to a left
+  sticky vertical sidebar (Suno-Cookbook style); collapses to a horizontal
+  scroll row under 760px.
+- **Favicon** now matches the on-page brand mark (theatre-masks emoji on the
+  cyan-amber gradient).
+- **"CC5 vs CC4" nav label localized** per language: en/es "vs", tr
+  "CC5 - CC4 Farkları" (Turkish "vs." reads as "vesaire"/etc., so the
+  English versus sense was misleading), zh "CC5 对比 CC4", de "CC5 vs. CC4".
+- **Global search + "All" view**: search now spans every category (default
+  scope is "all"), results render as stacked per-category sections with a
+  count; picking a category scopes back to it. New keys `nav.all`,
+  `search.resultCount`.
+- **README**: added a GitHub link + live-site link; fixed two stale
+  "What's inside" lines.
+- **Content expansion**: `whatsNew` 2 -> 5 (added subdivision/HD-mesh,
+  ActorMIXER, and Sticky Lips/Eyelid Constraint diffs, all verified against
+  official CC5 launch coverage), `bestPractices` 9 -> 15 (now a balanced
+  5/5/5 across tiers). `totalEntries` is now **97**.
+
 ## Next step
 
-M0-M10 are all DONE and the site is live. The initial build-out is complete:
-88 research-backed entries across 10 categories, EN+TR+ZH+ES+DE, with a
-browse/search/filter UI, deployed to GitHub Pages via `deploy.yml` on every
-push to `main`.
+Nothing outstanding. The project is complete and live with 97 research-backed
+entries across 10 categories in 5 languages, a global-search browse UI, and
+auto-deploy on push to `main`.
 
-There is no committed "M11". Future work, when the user wants it, would be
-new content or maintenance rather than a fixed roadmap - likely candidates:
-- Keeping content current as Character Creator updates ship (the footer
-  already tells readers to verify against the live app; `compiledDate` in
-  `src/data/content.ts` is the "as of" marker to bump).
-- Growing thin categories (Getting Started and What's New are deliberately
-  small; more version-diff entries especially could be added as more
-  official CC4-vs-CC5 differences are confirmed - see Decisions.md, only
-  independently verified diffs go in).
-- Any UX additions (deep-linking to a category/entry, copy-to-clipboard,
-  etc.) if desired; none are committed yet.
+Future work, when wanted, is content/maintenance rather than a fixed roadmap:
+- Keep content current as Character Creator updates ship (bump `compiledDate`
+  in `src/data/content.ts`, the "as of" marker).
+- Grow categories further (Getting Started is still deliberately small; more
+  CC4-vs-CC5 diffs can be added as official differences are confirmed - see
+  Decisions.md, only independently verified diffs go in).
+- Optional UX: deep-linking to a category/entry (URL state), copy-to-clipboard
+  on shortcuts/terms, OG/social meta tags - none committed yet.
 
-When resuming for new content, follow the same loop every prior milestone
-used: research from official Reallusion sources, write from scratch in our
-own words per Decisions.md D1/D5, add EN+TR then the other three locales,
-run build/lint + the data sanity check, and verify (including the
-translation-orthography grep from M9) before committing.
+When resuming for new content, follow the same loop every milestone used:
+research from official Reallusion sources, write from scratch in our own words
+per Decisions.md D1/D5, add EN+TR then zh/es/de, run build/lint + the data
+sanity check, and verify (including the translation-orthography grep from M9,
+and the em-dash grep) before committing. Push has intermittently stalled on
+the macOS keychain in this environment; if `git push` fails non-interactively,
+the user can run it from their own terminal.
