@@ -18,7 +18,6 @@ import {
   glossaryTerms,
   recipes,
   shortcuts,
-  totalEntries,
   whatsNewEntries,
 } from "./data/content";
 import { useLocalized } from "./hooks/useLocalized";
@@ -119,22 +118,12 @@ function App() {
     }
   };
 
+  // Counts reflect the active search (and skill filter): with no query these
+  // are the full totals, while a query narrows them so the sidebar shows
+  // where the matches are. "All" is the sum across every category.
   const countFor = (selection: NavSelection): number => {
-    if (selection === "all") return totalEntries;
-    switch (selection) {
-      case "recipe":
-        return recipes.length;
-      case "practice":
-        return bestPractices.length;
-      case "whatsNew":
-        return whatsNewEntries.length;
-      case "glossary":
-        return glossaryTerms.length;
-      case "shortcut":
-        return shortcuts.length;
-      default:
-        return featureEntries.filter((e) => e.category === selection).length;
-    }
+    if (selection === "all") return categories.reduce((n, c) => n + itemsFor(c.id).length, 0);
+    return itemsFor(selection).length;
   };
 
   const renderCards = (id: CategoryId, items: unknown[]): ReactNode => {
