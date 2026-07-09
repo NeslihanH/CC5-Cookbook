@@ -27,9 +27,6 @@
   "about": {
     "notice": "Character Creator kullanan biri tarafından hazırlanmış, resmi olmayan, açık kaynaklı, kar amacı gütmeyen bir başvuru kaynağıdır. Reallusion ile bağlantılı veya onaylı değildir."
   },
-  "status": {
-    "comingSoon": "Bu bölümün içeriği hazırlanıyor, yakında burada olacak."
-  },
   "footer": {
     "disclaimer": "Resmi olmayan bir başvuru kaynağıdır. Character Creator 5 her güncellemeyle değişebilir; güncel uygulamayla doğrulayın. Reallusion ile bağlantılı değildir.",
     "trademark": "Character Creator, Reallusion Inc. şirketinin ticari markasıdır. MIT Lisansı altında yayınlanmıştır.",

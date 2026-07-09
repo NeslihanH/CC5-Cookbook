@@ -1,1 +1,63 @@
-{}
+{
+  "app": {
+    "title": "CC5 Cookbook",
+    "tagline": "Una guía de referencia para los flujos de trabajo, funciones y buenas prácticas de Character Creator 5"
+  },
+  "nav": {
+    "gettingStarted": "Primeros pasos",
+    "coreCreation": "Creación básica",
+    "riggingAnimation": "Rigging y animación",
+    "pipelineExport": "Pipeline y exportación",
+    "ecosystem": "Ecosistema",
+    "recipes": "Recetas",
+    "bestPractices": "Buenas prácticas",
+    "whatsNew": "CC5 vs CC4",
+    "glossary": "Glosario",
+    "shortcuts": "Atajos e interfaz"
+  },
+  "skillLevel": {
+    "beginner": "Principiante",
+    "intermediate": "Intermedio",
+    "expert": "Experto"
+  },
+  "badge": {
+    "official": "Oficial",
+    "community": "Comunidad"
+  },
+  "about": {
+    "notice": "Una referencia no oficial, de código abierto y sin fines de lucro, creada por alguien que usa Character Creator. No está afiliada ni respaldada por Reallusion."
+  },
+  "footer": {
+    "disclaimer": "Referencia no oficial. Character Creator 5 evoluciona con cada actualización; verifica siempre con la aplicación actual. No afiliado con Reallusion.",
+    "trademark": "Character Creator es una marca registrada de Reallusion Inc. Publicado bajo la Licencia MIT.",
+    "verified": "Contenido compilado en {{date}}"
+  },
+  "theme": {
+    "toggleToDark": "Modo oscuro",
+    "toggleToLight": "Modo claro"
+  },
+  "search": {
+    "placeholder": "Buscar en esta sección...",
+    "noResultsTitle": "No hay entradas que coincidan con \"{{query}}\"",
+    "noResultsHint": "Prueba con otro término, o borra la búsqueda para ver todo el contenido de esta sección."
+  },
+  "filter": {
+    "allLevels": "Todos los niveles"
+  },
+  "card": {
+    "whereToFind": "Dónde encontrarlo",
+    "newInCC5": "Novedad en CC5",
+    "goal": "Objetivo",
+    "steps": "Pasos",
+    "targetTool": "Herramienta destino",
+    "notes": "Notas",
+    "rule": "Regla",
+    "aliases": "También conocido como",
+    "cc4": "CC4",
+    "cc5": "CC5",
+    "context": "Contexto"
+  },
+  "stats": {
+    "entryCount": "{{count}} entradas"
+  }
+}

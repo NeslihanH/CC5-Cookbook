@@ -1,1 +1,63 @@
-{}
+{
+  "app": {
+    "title": "CC5 Cookbook",
+    "tagline": "Ein Nachschlagewerk für Workflows, Funktionen und Best Practices in Character Creator 5"
+  },
+  "nav": {
+    "gettingStarted": "Erste Schritte",
+    "coreCreation": "Kernerstellung",
+    "riggingAnimation": "Rigging & Animation",
+    "pipelineExport": "Pipeline & Export",
+    "ecosystem": "Ökosystem",
+    "recipes": "Rezepte",
+    "bestPractices": "Bewährte Praktiken",
+    "whatsNew": "CC5 vs CC4",
+    "glossary": "Glossar",
+    "shortcuts": "Tastenkürzel & UI"
+  },
+  "skillLevel": {
+    "beginner": "Anfänger",
+    "intermediate": "Fortgeschritten",
+    "expert": "Experte"
+  },
+  "badge": {
+    "official": "Offiziell",
+    "community": "Community"
+  },
+  "about": {
+    "notice": "Ein inoffizielles, quelloffenes und gemeinnütziges Nachschlagewerk, erstellt von jemandem, der Character Creator nutzt. Nicht verbunden mit oder unterstützt von Reallusion."
+  },
+  "footer": {
+    "disclaimer": "Inoffizielles Nachschlagewerk. Character Creator 5 entwickelt sich mit jedem Update weiter; bitte anhand der aktuellen App überprüfen. Nicht verbunden mit Reallusion.",
+    "trademark": "Character Creator ist eine Marke von Reallusion Inc. Veröffentlicht unter der MIT-Lizenz.",
+    "verified": "Inhalt zusammengestellt am {{date}}"
+  },
+  "theme": {
+    "toggleToDark": "Dunkler Modus",
+    "toggleToLight": "Heller Modus"
+  },
+  "search": {
+    "placeholder": "In diesem Bereich suchen...",
+    "noResultsTitle": "Keine Einträge stimmen mit \"{{query}}\" überein",
+    "noResultsHint": "Versuche einen anderen Begriff, oder lösche die Suche, um alle Einträge in diesem Bereich zu sehen."
+  },
+  "filter": {
+    "allLevels": "Alle Stufen"
+  },
+  "card": {
+    "whereToFind": "Wo zu finden",
+    "newInCC5": "Neu in CC5",
+    "goal": "Ziel",
+    "steps": "Schritte",
+    "targetTool": "Zielprogramm",
+    "notes": "Hinweise",
+    "rule": "Regel",
+    "aliases": "Auch bekannt als",
+    "cc4": "CC4",
+    "cc5": "CC5",
+    "context": "Kontext"
+  },
+  "stats": {
+    "entryCount": "{{count}} Einträge"
+  }
+}

@@ -1,1 +1,63 @@
-{}
+{
+  "app": {
+    "title": "CC5 Cookbook",
+    "tagline": "Character Creator 5 工作流程、功能与最佳实践指南"
+  },
+  "nav": {
+    "gettingStarted": "入门指南",
+    "coreCreation": "核心创建",
+    "riggingAnimation": "绑定与动画",
+    "pipelineExport": "管线与导出",
+    "ecosystem": "生态系统",
+    "recipes": "食谱",
+    "bestPractices": "最佳实践",
+    "whatsNew": "CC5 vs CC4",
+    "glossary": "术语表",
+    "shortcuts": "快捷键与界面"
+  },
+  "skillLevel": {
+    "beginner": "初级",
+    "intermediate": "中级",
+    "expert": "高级"
+  },
+  "badge": {
+    "official": "官方",
+    "community": "社区"
+  },
+  "about": {
+    "notice": "这是一个由 Character Creator 用户制作的非官方、开源、非盈利参考资料，与 Reallusion 无关，也未获得其认可。"
+  },
+  "footer": {
+    "disclaimer": "非官方参考资料。Character Creator 5 会随每次更新而变化，请以当前应用程序为准核实。与 Reallusion 无关。",
+    "trademark": "Character Creator 是 Reallusion Inc. 的商标。本项目基于 MIT 许可证发布。",
+    "verified": "内容编译于 {{date}}"
+  },
+  "theme": {
+    "toggleToDark": "深色模式",
+    "toggleToLight": "浅色模式"
+  },
+  "search": {
+    "placeholder": "搜索本部分...",
+    "noResultsTitle": "没有与\"{{query}}\"匹配的条目",
+    "noResultsHint": "换一个词试试，或清空搜索以浏览本部分的全部内容。"
+  },
+  "filter": {
+    "allLevels": "所有级别"
+  },
+  "card": {
+    "whereToFind": "在哪里找到",
+    "newInCC5": "CC5 新功能",
+    "goal": "目标",
+    "steps": "步骤",
+    "targetTool": "目标工具",
+    "notes": "备注",
+    "rule": "规则",
+    "aliases": "其他名称",
+    "cc4": "CC4",
+    "cc5": "CC5",
+    "context": "情境"
+  },
+  "stats": {
+    "entryCount": "{{count}} 条内容"
+  }
+}
