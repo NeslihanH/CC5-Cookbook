@@ -202,49 +202,49 @@ body {
 }
 
 /* ------------------------------------------------------------------ */
-/* Body layout                                                          */
+/* Body layout: left sidebar + content (Suno Cookbook style)            */
 /* ------------------------------------------------------------------ */
 .layout {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 24px 20px 60px;
+  display: grid;
+  grid-template-columns: 236px 1fr;
+  gap: 28px;
+  align-items: start;
 }
 
+.sidebar { position: sticky; top: 24px; }
+
+.content { min-width: 0; }
+
 /* ------------------------------------------------------------------ */
-/* Category navigation                                                  */
+/* Category navigation: vertical list                                   */
 /* ------------------------------------------------------------------ */
-.category-nav {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  padding-bottom: 6px;
-  margin-bottom: 16px;
-  scrollbar-width: thin;
-}
+.category-nav { display: flex; flex-direction: column; gap: 3px; }
 
 .category-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 7px;
-  flex-shrink: 0;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  gap: 10px;
+  width: 100%;
+  border: 0;
+  background: transparent;
   color: var(--text-soft);
-  font-size: 13px;
-  font-weight: 650;
-  padding: 8px 14px;
-  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-align: left;
+  padding: 9px 12px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: background 0.14s, color 0.14s;
 }
-.category-btn:hover { border-color: var(--border-strong); color: var(--text); }
-.category-btn.is-active {
-  background: var(--accent-soft);
-  border-color: var(--accent-border);
-  color: var(--accent);
-}
+.category-btn:hover { background: var(--surface-2); color: var(--text); }
+.category-btn.is-active { background: var(--accent-soft); color: var(--accent); font-weight: 720; }
 
-.category-icon { font-size: 14px; }
+.category-icon { font-size: 16px; width: 20px; text-align: center; flex-shrink: 0; }
+.category-label { flex: 1; }
 
 .category-count {
   font-size: 11px;
@@ -252,9 +252,31 @@ body {
   color: var(--text-faint);
   background: var(--surface-2);
   border-radius: 999px;
-  padding: 1px 7px;
+  padding: 1px 8px;
 }
 .category-btn.is-active .category-count { color: var(--accent); background: var(--bg-elev); }
+
+/* ------------------------------------------------------------------ */
+/* Content heading (active category)                                    */
+/* ------------------------------------------------------------------ */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 2px 0 16px;
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+.section-icon { font-size: 19px; }
+.section-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-faint);
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
 
 /* ------------------------------------------------------------------ */
 /* Toolbar: search + skill filter                                       */
@@ -477,8 +499,36 @@ body {
 }
 .app-footer p { margin: 0 0 4px; }
 
+/* Narrow screens: sidebar collapses to a horizontal scroll row on top. */
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .sidebar {
+    position: static;
+    top: auto;
+    margin: 0 -20px;
+    padding: 0 20px 6px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .category-nav { flex-direction: row; gap: 8px; }
+  .category-btn {
+    width: auto;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 999px;
+  }
+  .category-btn.is-active { border-color: var(--accent-border); }
+}
+
 @media (max-width: 480px) {
   .brand-tagline { display: none; }
   .header-top { padding: 12px 16px; }
   .layout { padding: 24px 16px 50px; }
+  .sidebar { margin: 0 -16px; padding: 0 16px 6px; }
 }

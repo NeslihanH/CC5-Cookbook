@@ -73,10 +73,15 @@ src/
     cards/         one renderer per ContentItem shape: FeatureCard,
                    RecipeCard, BestPracticeCard, GlossaryCard, ShortcutCard,
                    VersionDiffCard
-  App.tsx          M8: real browse/search UI. Category tabs (with per-
-                   category counts) drive which data array + card component
-                   renders; search filters within the active category;
-                   Best Practices additionally gets a skill-level filter.
+  App.tsx          real browse/search UI. A left sticky sidebar
+                   (`CategoryNav`, vertical list with per-category counts,
+                   Suno-Cookbook-style) selects the active category, which
+                   drives which data array + card component renders in the
+                   content column; the content shows a section heading plus a
+                   search box that filters within the active category (Best
+                   Practices additionally gets a skill-level filter). Layout
+                   is a `.layout` CSS grid (236px sidebar + 1fr content) that
+                   collapses to a horizontal scroll nav on top under 760px.
   main.tsx index.css
 ```
 

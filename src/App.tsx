@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import type { CategoryId, SkillLevel } from "./data/types";
 import {
   bestPractices,
+  categories,
   compiledDate,
   featureEntries,
   glossaryTerms,
@@ -47,6 +48,7 @@ function App() {
   const [activeCategory, setActiveCategory] = useState<CategoryId>("gettingStarted");
   const [query, setQuery] = useState("");
   const [skillLevel, setSkillLevel] = useState<SkillLevel | "all">("all");
+  const activeCat = categories.find((c) => c.id === activeCategory);
 
   const handleCategoryChange = (category: CategoryId) => {
     setActiveCategory(category);
@@ -118,15 +120,28 @@ function App() {
   return (
     <>
       <Header />
-      <main className="layout">
-        <CategoryNav activeCategory={activeCategory} onChange={handleCategoryChange} countFor={countFor} />
+      <div className="layout">
+        <aside className="sidebar">
+          <CategoryNav activeCategory={activeCategory} onChange={handleCategoryChange} countFor={countFor} />
+        </aside>
 
-        <div className="toolbar">
-          <SearchBar value={query} onChange={setQuery} />
-          {activeCategory === "practice" && <SkillFilter value={skillLevel} onChange={setSkillLevel} />}
-        </div>
+        <main className="content">
+          {activeCat && (
+            <h2 className="section-title">
+              <span className="section-icon" aria-hidden="true">
+                {activeCat.icon}
+              </span>
+              {t(activeCat.labelKey)}
+              <span className="section-count">{countFor(activeCategory)}</span>
+            </h2>
+          )}
 
-        {FEATURE_CATEGORIES.includes(activeCategory) &&
+          <div className="toolbar">
+            <SearchBar value={query} onChange={setQuery} />
+            {activeCategory === "practice" && <SkillFilter value={skillLevel} onChange={setSkillLevel} />}
+          </div>
+
+          {FEATURE_CATEGORIES.includes(activeCategory) &&
           (filteredFeatures.length ? (
             <div className="entry-grid">
               {filteredFeatures.map((entry) => (
@@ -192,12 +207,13 @@ function App() {
             <EmptyState query={query} />
           ))}
 
-        <footer className="app-footer">
-          <p>{t("footer.disclaimer")}</p>
-          <p>{t("footer.trademark")}</p>
-          <p>{t("footer.verified", { date: compiledDate })}</p>
-        </footer>
-      </main>
+          <footer className="app-footer">
+            <p>{t("footer.disclaimer")}</p>
+            <p>{t("footer.trademark")}</p>
+            <p>{t("footer.verified", { date: compiledDate })}</p>
+          </footer>
+        </main>
+      </div>
     </>
   );
 }
