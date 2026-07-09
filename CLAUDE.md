@@ -218,19 +218,53 @@ npm run preview  # serve the production build
   88 entries confirmed to have non-empty `zh`/`es`/`de` on every `Localized`
   field (script-checked, not sampled), zero duplicate `id`s, and `en`/`tr`
   text content byte-identical to the pre-M9 commit.
-- M10 polish + trademark/English audit + deploy: NOT STARTED.
+- M10 polish + trademark/English audit + deploy: CODE DONE, deploy pending
+  a manual repo setting + push (see Next step). Audits all passed:
+  - Trademark: the "unofficial / not affiliated / not endorsed by
+    Reallusion" disclaimer plus the "Character Creator is a trademark of
+    Reallusion Inc." attribution are present and correct in all 5 languages
+    (`about.notice`, `footer.disclaimer`, `footer.trademark`); `LICENSE`
+    (MIT) exists and the footer's MIT claim is accurate. Trademarks are used
+    descriptively only. Compliant with the Hard rules.
+  - English-literal audit: all 109 plain-English literal fields
+    (`FeatureEntry.name`, `subgroup`, `GlossaryTerm.term`/`aliases`,
+    `Shortcut.keys`, `Recipe.targetTool`) are pure ASCII, zero non-English
+    leakage from the M9 translation pass (script-checked).
+  - Bundle size: decided NOT to code-split. The single ~560KB/199KB-gzipped
+    chunk is intentional (the whole 5-language dataset must be in memory for
+    the instant browse/search/language-switch UX; splitting would add
+    loading states for a marginal transfer win). Silenced the misleading
+    Vite warning via `build.chunkSizeWarningLimit: 700` in `vite.config.ts`
+    with an explanatory comment.
+  - Fixed a real `vite preview` bug found during verification: the base was
+    only set for `command === "build"`, so `preview` served the built HTML
+    (which has `/CC5-Cookbook/` baked into asset URLs) from `/` and every
+    asset 404'd - i.e. `npm run preview` never actually worked. Fixed by
+    also applying the deploy base when Vite's `isPreview` is true. Does NOT
+    affect the real GH Pages deploy (which always served under the correct
+    base); it only unblocked local production-build verification.
+  - Verified the production build end-to-end: served it via `npm run
+    preview` under `/CC5-Cookbook/` and drove it headless (Playwright) -
+    real content renders, category switch works, zero console errors, zero
+    failed asset requests. This is the exact artifact GH Pages will serve.
 
 ## Next step
 
-M10: polish pass before deploy. Needs: a Reallusion-trademark usage audit
-(CLAUDE.md's "Hard rules" already say trademarks are descriptive-use only,
-never implying endorsement - check the actual UI/content for compliance),
-an English-copy audit (nothing accidentally non-English leaking into `name`/
-`term`/`keys`/`subgroup`/`targetTool` fields, which must stay plain English
-literals per Decisions.md D4/D8), a look at the bundle-size warning from
-`npm run build` (single JS chunk is now ~560KB / ~199KB gzipped with 5
-languages of content - consider whether code-splitting is worth it for a
-static reference SPA, or whether it's fine as-is), and then the actual
-GitHub Pages deploy via the GitHub Actions workflow already scaffolded in
-M0. Confirm `npm run build` output looks right with `npm run preview`
-before deploying.
+Deploy is the only thing left, and it needs two things that must be done by
+the repo owner, not automatable from here:
+1. **Enable GitHub Pages with "GitHub Actions" as the source** in the repo
+   settings (github.com/NeslihanH/CC5-Cookbook -> Settings -> Pages ->
+   Build and deployment -> Source: GitHub Actions). As of M10 the site at
+   https://neslihanh.github.io/CC5-Cookbook/ returns 404, meaning Pages has
+   not been deployed yet. The `.github/workflows/deploy.yml` (scaffolded in
+   M0) is correct and will handle build+deploy once Pages is enabled.
+2. **Push `main` to origin.** All of M1-M10 is committed locally but NOT yet
+   pushed (origin still only has the M0 scaffold commit). Pushing to this
+   public repo triggers `deploy.yml`, which builds and publishes the site.
+   This is an outward-facing action (makes the site public), so confirm with
+   the user before pushing.
+
+After the first successful deploy, verify the live URL renders (not 404) and
+spot-check a couple of languages/categories on the real Pages host. If the
+site 404s after a green workflow run, the Pages source setting (step 1) is
+the usual culprit.
