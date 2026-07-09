@@ -67,3 +67,60 @@ a roadmap grid previewing the ten planned categories).
 Next: M1 - design the content schema (Feature, Recipe, BestPractice-with-
 skill-level, GlossaryTerm, Shortcut, VersionDiff types) and lock the final
 category tree before writing any actual CC5 content.
+
+## Session 2 (2026-07-09)
+
+Resumed after a machine reset. First verified M1 (schema + one stub data file
+per category + `useLocalized`) was intact, then committed it - the user asked
+for a "full control" rather than trusting the resume doc's "DONE", which
+surfaced the session's recurring theme: a "done" claim is a hypothesis to
+verify, not a fact to relay.
+
+Wrote all content, EN+TR, one milestone per category, researching each batch
+from official Reallusion sources and writing from scratch (Decisions.md
+D1/D5): M2 Core Creation (7), M3 Rigging & Animation (6), M4 Pipeline &
+Export (8), M5 Ecosystem (5), M6 Recipes (6, sequencing already-documented
+features rather than re-explaining them), M7 Best Practices (9, skill-tiered)
++ Shortcuts (13) + Glossary (27) + first CC5-vs-CC4 diffs (2). Also filled a
+Getting Started (5) gap the original M2-M7 plan had missed. During M3 wrongly
+concluded "Motion+" was not a real product; M5 research corrected it to a real
+ActorCore format (Decisions.md D9).
+
+M8 replaced the placeholder shell with the real browse/search UI (category
+nav, search, skill filter, one card renderer per content type), broken into
+components. M9 translated everything to zh/es/de via three parallel background
+agents split by file; caught by manual grep - not the agents' clean
+build/lint self-reports - that one agent had stripped every Spanish accent and
+German umlaut, and fixed it with a targeted pass (lesson: build/lint passing
+does not mean translated content is orthographically correct). M10 ran the
+trademark + English-literal audits (both clean), decided against
+code-splitting the single 5-language bundle, fixed a real `vite preview` base
+bug, and deployed to GitHub Pages; the one blocker was enabling Pages with
+"GitHub Actions" as source (a manual repo setting the owner flipped). Site
+went live at neslihanh.github.io/CC5-Cookbook/.
+
+Post-launch polish, driven by the user reviewing the live site, all deployed:
+redesigned the category nav into a left vertical sidebar (Suno-style,
+Decisions.md D10); matched the favicon to the on-page brand mark; localized
+the "CC5 vs CC4" nav label per language after the user flagged that Turkish
+"vs" reads as "vesaire" (Decisions.md D11); added global search across all
+categories with an "All"-scope default and sidebar counts that follow the
+query (D10); expanded content to 97 entries (+3 verified CC4-vs-CC5 diffs
+incl. subdivision/ActorMIXER/Sticky-Lips, +6 best practices to a balanced
+5/5/5); moved the search into the sticky header (full-width) and added an info
+emoji to the notice banner; removed a redundant header entry-count stat; and
+fixed two live bugs (sidebar counts not following search; the sticky header
+unpinning after one screen because `#root` had `height:100%` instead of
+`min-height`). Declined to make the disclaimer sticky - top banner + footer +
+LICENSE are already sufficient (Decisions.md D12). Added a GitHub + live-site
+link to the README.
+
+Recurring theme: several "done" claims (the resume doc's M1 status, a
+"Motion+ doesn't exist" conclusion, subagent success reports) turned out wrong
+on independent verification - each became a memory note to verify rather than
+relay. The `git push` also stalled intermittently on the macOS keychain; the
+user pushed a few commits from their own terminal when it did.
+
+Status: project complete and live - 97 research-backed entries across 10
+categories in 5 languages, global-search sidebar UI, auto-deploy on push to
+`main`. No open milestones; remaining work is content/maintenance only.

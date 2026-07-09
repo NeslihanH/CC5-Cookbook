@@ -113,3 +113,43 @@ something CC5 itself does. Lesson for later milestones: "no feature by this
 name in the area I searched" is not the same as "this name does not exist in
 the product" - a name search must cover the wider Reallusion ecosystem
 (ActorCore, iClone) before concluding a roadmap term is a misnomer.
+
+## D10 (post-launch) - UI: left vertical sidebar + global "All"-default
+search, sidebar counts follow the query
+
+The M8 UI showed one category at a time with search scoped to the active
+category. That failed the core reference-tool case: if you don't know which
+category an entry lives in, you can't find it. Post-launch, the nav became a
+left vertical sidebar (Suno-Cookbook style) with an "All" scope that is the
+default, so search spans every category from the first keystroke and results
+render as stacked per-category sections. The sidebar per-category counts are
+derived from the same filtered lists the sections use, so a query narrows
+every count (they are full totals when the box is empty). Findability beats a
+tidy single-category view for this kind of tool; the model mirrors Suno
+Cookbook's All-view + header search. The search itself lives in the header as
+a full-width sticky row (always visible while scrolling).
+
+## D11 (post-launch) - The "CC5 vs CC4" nav label is localized per language
+
+Product names (CC5, CC4) stay English everywhere (per D4), but the connector
+word is localized rather than left as a blanket English "vs". In Turkish,
+"vs." is the standard abbreviation for "vesaire" (etc.), so "CC5 vs CC4"
+misreads as "CC5 etcetera CC4"; Turkish uses "CC5 - CC4 Farkları"
+(differences). Chinese uses "CC5 对比 CC4" (对比 = comparison); German uses
+"CC5 vs. CC4" (period per German convention); en/es keep "vs" (idiomatic in
+both). Lesson: an internationally-borrowed abbreviation ("vs" from Latin
+versus) can collide with a native word in one language - don't assume it is
+safe in every locale just because it is common in several.
+
+## D12 (post-launch) - The unofficial/trademark disclaimer stays prominent,
+not omnipresent
+
+Considered making the "unofficial / not affiliated with or endorsed by
+Reallusion" notice a sticky, always-on-screen banner "to be safer". Decided
+against it: a trademark/affiliation disclaimer needs to be present and
+reasonably visible, not on screen every moment. The site already carries a
+prominent top banner (before any content), a footer disclaimer, and a LICENSE
+trademark note - the standard, sufficient setup for an unofficial reference.
+Making the full banner sticky would inflate the header (brand + search +
+banner) and eat content space on every scroll for no real legal gain, and
+persistent banners invite banner-blindness anyway. Keep it as-is.

@@ -280,6 +280,24 @@ deployed):
   ActorMIXER, and Sticky Lips/Eyelid Constraint diffs, all verified against
   official CC5 launch coverage), `bestPractices` 9 -> 15 (now a balanced
   5/5/5 across tiers). `totalEntries` is now **97**.
+- **Search moved into the header**: it's now a full-width sticky row right
+  under the brand (Suno-style, `Header` renders `SearchBar`), always visible
+  on scroll, instead of sitting in the content column. The notice moved out
+  of the sticky header into its own `NoticeBanner` component (non-sticky,
+  below the header) and got a small info emoji prefix.
+- **Removed the header entry-count stat** ("N entries" next to the language
+  switch) - it duplicated the sidebar's "All" count; dropped the
+  `.entry-count` CSS and `stats.entryCount` i18n key too.
+- **Two live-bug fixes**: (1) sidebar category counts now follow the active
+  search (`countFor` derives from the filtered lists), so a query narrows
+  every count; (2) the sticky header stayed pinned only for one screen
+  because `#root` was `height: 100%` (viewport-tall, clipping the sticky
+  containing block) - changed to `min-height: 100%` so it stays pinned
+  through the whole page.
+- **Disclaimer stays as-is** (Decisions.md D12): considered making the
+  unofficial-notice a sticky always-on banner, decided the prominent top
+  banner + footer + LICENSE are already sufficient and sticky would cost UX
+  for no legal gain.
 
 ## Next step
 
