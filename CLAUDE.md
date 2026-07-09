@@ -58,16 +58,25 @@ src/
     types.ts       FeatureEntry / Recipe / BestPractice / VersionDiffEntry /
                    GlossaryTerm / Shortcut / Category
     gettingStarted.ts coreCreation.ts riggingAnimation.ts pipelineExport.ts
-    ecosystem.ts   (all FeatureEntry[], empty until M2-M5)
+    ecosystem.ts   (all FeatureEntry[], filled M2-M5 + a Getting Started
+                   catch-up, 31 entries total)
     recipes.ts bestPractices.ts whatsNew.ts glossary.ts shortcuts.ts
-                   (empty until M6-M7)
+                   (filled M6-M7: 6/9/2/27/13 entries)
     content.ts     aggregator: categories, featureEntries, exports, totals
+                   (88 entries via `totalEntries`)
   i18n/            i18n config + locales/en.json, tr.json, zh.json, es.json, de.json
   hooks/           useTheme (light/dark), useLocalized (locale picker with
                    English fallback)
-  App.tsx          current: placeholder shell (brand, language switch, theme,
-                   roadmap cards). Will grow into browse/search/category layout
-                   in M8, once `src/data/` holds real content.
+  lib/search.ts    diacritic-insensitive (Turkish-aware) search normalize +
+                   matchesQuery helper
+  components/      Header, CategoryNav, SearchBar, SkillFilter, Badge
+    cards/         one renderer per ContentItem shape: FeatureCard,
+                   RecipeCard, BestPracticeCard, GlossaryCard, ShortcutCard,
+                   VersionDiffCard
+  App.tsx          M8: real browse/search UI. Category tabs (with per-
+                   category counts) drive which data array + card component
+                   renders; search filters within the active category;
+                   Best Practices additionally gets a skill-level filter.
   main.tsx index.css
 ```
 
@@ -75,9 +84,6 @@ Content datasets are localized per Decisions.md D4: prose fields are
 `Localized` (`en`/`tr` required, `zh`/`es`/`de` optional); official Reallusion
 terms (`FeatureEntry.name`, `GlossaryTerm.term`) stay plain English strings,
 same as Suno Cookbook keeps Suno tag literals in English.
-
-Component breakout (`Header`, `CategoryNav`, cards, etc.) happens in M8, once
-there is real content to render.
 
 ## How to run
 
@@ -158,27 +164,42 @@ npm run preview  # serve the production build
   `recipes`, `bestPractices`) plus `glossary`, `shortcuts` and `whatsNew` now
   hold real, EN+TR, research-backed content - 83 entries total via
   `totalEntries` in `src/data/content.ts`.
-- M8 UI (browse, search, category nav, skill-level filter, copy, language
-  switch, theme): NOT STARTED. Note from mid-M5: the user checked the local
-  dev server and (correctly) couldn't see any of the content written so far -
-  `App.tsx` still only renders the M0 placeholder roadmap cards and never
-  reads `src/data/content.ts`. This is expected per the M8 plan, not a bug;
-  confirmed with the user to keep writing M6-M7 content first rather than
-  build an early preview UI. Now that M2-M7 are done, M8 is what makes all
-  of it visible.
+  Between M7 and M8, also filled `gettingStarted.ts` (5 entries), a gap the
+  original M2-M7 milestone plan missed - `totalEntries` is now 88.
+- M8 UI: DONE. `App.tsx` is now the real browse/search app: `CategoryNav`
+  (10 tabs with live per-category counts, horizontally scrollable),
+  `SearchBar` (diacritic-insensitive, Turkish-aware, filters within the
+  active category via `src/lib/search.ts`), `SkillFilter` (Beginner/
+  Intermediate/Expert, shown only for Best Practices), and one card
+  component per `ContentItem` shape under `src/components/cards/`
+  (FeatureEntry/Recipe/BestPractice/VersionDiff render as a card grid;
+  Glossary/Shortcut render as a denser row list, since 27/13 dictionary-
+  style entries don't suit big cards). `Header` was extracted from the old
+  M0 App.tsx with no behavior change (brand, language switch, theme toggle,
+  notice banner + GitHub link), plus a live entry-count stat. Official/
+  Community badges, `newInCC5` badges and subgroup tags all wired in.
+  Verified with a real headless-browser pass (Playwright, since
+  `chromium-cli` wasn't available in this environment): every category,
+  search-within-category, the skill filter, Turkish locale switch and dark
+  mode all screenshot correctly with zero console errors. New i18n keys
+  (`search.*`, `filter.*`, `card.*`, `stats.*`) added to both `en.json` and
+  `tr.json`, kept in parity. The old M0 `roadmap-grid`/`roadmap-card` CSS
+  and the unused `status.comingSoon` copy were removed/left unused rather
+  than kept as dead weight.
 - M9 translation pass to zh/es/de: NOT STARTED.
 - M10 polish + trademark/English audit + deploy: NOT STARTED.
 
 ## Next step
 
-M8: build the real browse/search UI in `App.tsx` (and break it into
-components - `Header`, `CategoryNav`, cards per content type - per the
-"Component breakout" note above). Needs: category navigation over
-`categories` from `src/data/content.ts`, card rendering for each of the 6
-`ContentItem` shapes (`FeatureEntry`, `Recipe`, `BestPractice`,
-`VersionDiffEntry`, `GlossaryTerm`, `Shortcut`), client-side diacritic-
-insensitive search per the repo layout notes, a skill-level filter for Best
-Practices, Official/Community badges (`badge.official`/`badge.community`
-keys already exist in the locale files), and `useLocalized` (already built
-in M1) wired into every card. Existing theme/language switch and the M0
-notice banner should carry over largely as-is.
+M9: translate all EN+TR content (88 entries across `src/data/*.ts`) plus the
+UI copy in `en.json`/`tr.json` into `zh`, `es`, `de`. Per Decisions.md D4,
+these are optional `Localized` fields that currently fall back to English;
+translations must be written fresh in each language's own voice, not
+machine-translated-sounding (same rule as EN/TR: Decisions.md D1). This is a
+large, mostly mechanical-but-not-really milestone - consider whether to do
+it as one pass per language or one pass per data file, and whether it
+belongs in a fresh session given its size (see the token-usage discussion
+from this session: long single sessions get expensive as context grows;
+translation work has no research phase, so a fresh `/clear`d session losing
+CLAUDE.md/Decisions.md context costs nothing since neither changes much
+here).

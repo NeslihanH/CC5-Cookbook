@@ -38,5 +38,29 @@
   "theme": {
     "toggleToDark": "Dark mode",
     "toggleToLight": "Light mode"
+  },
+  "search": {
+    "placeholder": "Search this section...",
+    "noResultsTitle": "No entries match \"{{query}}\"",
+    "noResultsHint": "Try a different term, or clear the search to browse everything in this section."
+  },
+  "filter": {
+    "allLevels": "All levels"
+  },
+  "card": {
+    "whereToFind": "Where to find it",
+    "newInCC5": "New in CC5",
+    "goal": "Goal",
+    "steps": "Steps",
+    "targetTool": "Target",
+    "notes": "Notes",
+    "rule": "Rule",
+    "aliases": "Also known as",
+    "cc4": "CC4",
+    "cc5": "CC5",
+    "context": "Context"
+  },
+  "stats": {
+    "entryCount": "{{count}} entries"
   }
 }

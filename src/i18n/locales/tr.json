@@ -38,5 +38,29 @@
   "theme": {
     "toggleToDark": "Karanlık mod",
     "toggleToLight": "Aydınlık mod"
+  },
+  "search": {
+    "placeholder": "Bu bölümde ara...",
+    "noResultsTitle": "\"{{query}}\" ile eşleşen girdi yok",
+    "noResultsHint": "Farklı bir terim dene, ya da bu bölümdeki her şeyi görmek için aramayı temizle."
+  },
+  "filter": {
+    "allLevels": "Tüm seviyeler"
+  },
+  "card": {
+    "whereToFind": "Nerede bulunur",
+    "newInCC5": "CC5'te yeni",
+    "goal": "Amaç",
+    "steps": "Adımlar",
+    "targetTool": "Hedef",
+    "notes": "Notlar",
+    "rule": "Kural",
+    "aliases": "Diğer adları",
+    "cc4": "CC4",
+    "cc5": "CC5",
+    "context": "Bağlam"
+  },
+  "stats": {
+    "entryCount": "{{count}} girdi"
   }
 }
