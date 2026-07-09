@@ -11,6 +11,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "A level of extra geometric detail added on top of a character's base mesh. Character Creator's HD bases are built to support subdivision from the start, so raising the level unlocks finer sculpting (via HD Morphs or ZBrush) without needing a separate high-poly model.",
       tr: "Bir karakterin temel mesh'inin üzerine eklenen ekstra geometrik detay seviyesi. Character Creator'ın HD temel bedenleri baştan itibaren subdivision'ı destekleyecek şekilde kurulur; seviyeyi artırmak, ayrı bir yüksek poligonlu model gerekmeden (HD Morphs veya ZBrush ile) daha ince heykeltıraşlığın kapısını açar.",
+      zh: "在角色基础网格之上添加的额外几何细节层级。Character Creator 的 HD 基础体从一开始就支持 subdivision，因此提高该级别就能解锁更精细的雕刻（通过 HD Morphs 或 ZBrush），而不需要单独的高模。",
+      es: "Un nivel de detalle geométrico adicional añadido sobre la malla base de un personaje. Las bases HD de Character Creator están construidas para soportar subdivisión desde el principio, así que subir el nivel desbloquea un esculpido más fino (mediante HD Morphs o ZBrush) sin necesitar un modelo de alto poligonaje aparte.",
+      de: "Eine Stufe zusätzlichen geometrischen Details, die über dem Basis-Mesh eines Charakters hinzugefügt wird. Character Creators HD-Basiskörper sind von Anfang an für Subdivision ausgelegt, sodass eine höhere Stufe feineres Sculpting (über HD Morphs oder ZBrush) ermöglicht, ohne ein separates High-Poly-Modell zu benötigen.",
     },
     official: true,
   },
@@ -21,6 +24,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Morph sliders that add anatomical detail (muscle, folds, wrinkles, age) on top of a character's base shape, working together with subdivision levels rather than replacing the base mesh. See the Core Creation entry for the full workflow.",
       tr: "Bir karakterin temel şeklinin üzerine anatomik detay (kas, kıvrım, kırışıklık, yaş) ekleyen morf kaydırıcıları; temel mesh'in yerini almak yerine subdivision seviyeleriyle birlikte çalışır. Tüm iş akışı için Core Creation girdisine bakın.",
+      zh: "在角色基础形态之上添加解剖细节（肌肉、褶皱、皱纹、年龄）的变形滑块，与 subdivision 级别协同工作，而不是取代基础网格。完整工作流程请参见 Core Creation 条目。",
+      es: "Deslizadores de morph que añaden detalle anatómico (músculo, pliegues, arrugas, edad) sobre la forma base de un personaje, trabajando junto con los niveles de subdivisión en lugar de reemplazar la malla base. Consulta la entrada de Core Creation para el flujo de trabajo completo.",
+      de: "Morph-Regler, die anatomisches Detail (Muskeln, Falten, Runzeln, Alter) über der Grundform eines Charakters hinzufügen und dabei mit den Subdivision-Stufen zusammenarbeiten, statt das Basis-Mesh zu ersetzen. Den vollständigen Workflow findest du im Core-Creation-Eintrag.",
     },
     official: true,
   },
@@ -31,6 +37,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Character Creator's layer-based skin and makeup editor, built around a non-removable base skin layer plus stackable, reorderable detail and makeup layers.",
       tr: "Character Creator'ın katman tabanlı cilt ve makyaj editörü; kaldırılamayan bir temel cilt katmanı ile bunun üzerine eklenen, sıralanabilir detay ve makyaj katmanlarından oluşur.",
+      zh: "Character Creator 基于图层的皮肤与妆容编辑器，围绕一个不可移除的基础皮肤层，加上可堆叠、可重新排序的细节和妆容图层构建。",
+      es: "El editor de piel y maquillaje basado en capas de Character Creator, construido alrededor de una capa base de piel no eliminable más capas de detalle y maquillaje apilables y reordenables.",
+      de: "Character Creators ebenenbasierter Haut- und Make-up-Editor, aufgebaut um eine nicht entfernbare Basis-Hautebene plus stapelbare, neu anordenbare Detail- und Make-up-Ebenen.",
     },
     official: true,
   },
@@ -41,6 +50,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Character Creator's card-based hair, beard and brow system, assembled from reusable Elements grouped into Groups and Styles, and shaded with the dedicated Smart Hair Shader.",
       tr: "Character Creator'ın kart tabanlı saç, sakal ve kaş sistemi; yeniden kullanılabilir Elements'ten oluşturulup Groups ve Styles halinde gruplanır ve özel Smart Hair Shader ile gölgelendirilir.",
+      zh: "Character Creator 基于卡片（card）的头发、胡须和眉毛系统，由可复用的 Elements 组成，归入 Groups 和 Styles 中，并使用专用的 Smart Hair Shader 进行着色。",
+      es: "El sistema de pelo, barba y cejas basado en tarjetas (cards) de Character Creator, ensamblado a partir de Elements reutilizables agrupados en Groups y Styles, y sombreado con el Smart Hair Shader dedicado.",
+      de: "Character Creators kartenbasiertes System für Haare, Bart und Augenbrauen, zusammengesetzt aus wiederverwendbaren Elements, die in Groups und Styles gruppiert und mit dem eigenen Smart Hair Shader schattiert werden.",
     },
     official: true,
   },
@@ -51,6 +63,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "A grayscale map painted directly onto a garment or hair object to control physics: white areas move freely under simulation, black areas stay pinned to the body, and gray values blend between the two.",
       tr: "Bir kıyafet veya saç nesnesinin üzerine doğrudan boyanan, fiziği kontrol eden gri tonlamalı bir harita: beyaz alanlar simülasyon altında serbestçe hareket eder, siyah alanlar bedene sabitlenmiş kalır, gri değerler ise ikisi arasında geçiş yapar.",
+      zh: "直接绘制在服装或头发对象上的灰度贴图，用于控制物理效果：白色区域在模拟中自由运动，黑色区域固定在身体上，灰色数值在两者之间过渡。",
+      es: "Un mapa en escala de grises pintado directamente sobre una prenda u objeto de pelo para controlar la física: las áreas blancas se mueven libremente en la simulación, las áreas negras quedan fijadas al cuerpo, y los valores grises mezclan entre ambos.",
+      de: "Eine Graustufenkarte, die direkt auf ein Kleidungsstück oder Haarobjekt gemalt wird, um die Physik zu steuern: weiße Bereiche bewegen sich in der Simulation frei, schwarze Bereiche bleiben am Körper fixiert, und Grauwerte mischen zwischen beidem.",
     },
     official: true,
   },
@@ -62,6 +77,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Physically Based Rendering: a material model built from Base Color, Metallic, Roughness and Normal channels, used for anything in Character Creator that does not use a dedicated shader such as the Digital Human Shader.",
       tr: "Physically Based Rendering (fiziksel tabanlı render): Base Color, Metallic, Roughness ve Normal kanallarından oluşan bir materyal modeli; Character Creator'da Digital Human Shader gibi özel bir shader kullanmayan her şey için geçerlidir.",
+      zh: "Physically Based Rendering（基于物理的渲染）：一种由 Base Color、Metallic、Roughness 和 Normal 通道构成的材质模型，用于 Character Creator 中所有不使用 Digital Human Shader 等专用 shader 的内容。",
+      es: "Physically Based Rendering (renderizado basado en física): un modelo de material construido a partir de los canales Base Color, Metallic, Roughness y Normal, usado para todo en Character Creator que no utiliza un shader dedicado como el Digital Human Shader.",
+      de: "Physically Based Rendering (physikalisch basiertes Rendering): ein Materialmodell aus den Kanälen Base Color, Metallic, Roughness und Normal, verwendet für alles in Character Creator, das keinen eigenen Shader wie den Digital Human Shader nutzt.",
     },
     official: true,
   },
@@ -72,6 +90,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "A set of specialized shaders (skin, eye, hair) that model light behavior standard PBR cannot, most notably real-time subsurface scattering for skin.",
       tr: "Standart PBR'ın modelleyemediği ışık davranışlarını (özellikle cilt için gerçek zamanlı subsurface scattering) hesaba katan, özelleşmiş bir shader seti (cilt, göz, saç).",
+      zh: "一套专门的 shader（皮肤、眼睛、头发），能够模拟标准 PBR 无法实现的光照行为，最显著的就是皮肤的实时次表面散射（subsurface scattering）。",
+      es: "Un conjunto de shaders especializados (piel, ojo, pelo) que modelan comportamientos de luz que el PBR estándar no puede, sobre todo la dispersión subsuperficial (subsurface scattering) de la piel en tiempo real.",
+      de: "Ein Satz spezialisierter Shader (Haut, Auge, Haar), die Lichtverhalten modellieren, das Standard-PBR nicht abbilden kann, allen voran Echtzeit-Subsurface-Scattering für Haut.",
     },
     official: true,
   },
@@ -82,6 +103,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Character Creator's three rig classifications. Standard characters match the reference skeleton and facial rig exactly, so they get full expression editing, swappable clothing and the shared iClone/ActorCore motion library; Humanoid characters are adapted enough to reuse standard motions but not to swap parts; Creature characters keep a fully custom skeleton with its own animations and no facial or part editing.",
       tr: "Character Creator'ın üç rig sınıflandırması. Standard karakterler referans iskelet ve yüz rig'iyle birebir eşleşir, bu yüzden tam ifade düzenleme, değiştirilebilir kıyafet ve ortak iClone/ActorCore hareket kütüphanesine erişim kazanır; Humanoid karakterler standart hareketleri kullanacak kadar uyarlanmıştır ama parça değişimi desteklemez; Creature karakterler ise tamamen özel bir iskelet, kendi animasyonlarını korur ve yüz veya parça düzenlemesi almaz.",
+      zh: "Character Creator 的三种 rig 分类。Standard 角色与参考骨骼和面部 rig 完全匹配，因此可以获得完整的表情编辑、可替换服装以及共享的 iClone/ActorCore 动作库；Humanoid 角色的适配程度足以复用标准动作，但不能替换部件；Creature 角色保留完全自定义的骨骼及其自有动画，不支持面部或部件编辑。",
+      es: "Las tres clasificaciones de rig de Character Creator. Los personajes Standard coinciden exactamente con el esqueleto y el rig facial de referencia, por lo que obtienen edición completa de expresiones, ropa intercambiable y la biblioteca de movimiento compartida de iClone/ActorCore; los personajes Humanoid están lo bastante adaptados para reutilizar movimientos estándar pero no para intercambiar piezas; los personajes Creature conservan un esqueleto totalmente personalizado con sus propias animaciones y sin edición facial ni de piezas.",
+      de: "Character Creators drei Rig-Klassifizierungen. Standard-Charaktere entsprechen genau dem Referenzskelett und Gesichtsrig und erhalten daher vollständige Ausdrucksbearbeitung, austauschbare Kleidung und Zugriff auf die gemeinsame iClone/ActorCore-Bewegungsbibliothek; Humanoid-Charaktere sind ausreichend angepasst, um Standardbewegungen wiederzuverwenden, aber nicht, um Teile auszutauschen; Creature-Charaktere behalten ein vollständig individuelles Skelett mit eigenen Animationen und ohne Gesichts- oder Teilebearbeitung.",
     },
     official: true,
   },
@@ -92,6 +116,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Reallusion's automatic rigging engine, bundled with Character Creator and also available as a free standalone app, that estimates a working skeleton and skin weights on humanoid meshes.",
       tr: "Reallusion'ın otomatik rigging motoru; Character Creator ile birlikte gelir ve ücretsiz bağımsız bir uygulama olarak da mevcuttur, insansı mesh'ler üzerinde çalışan bir iskelet ve deri ağırlığı tahmini yapar.",
+      zh: "Reallusion 的自动绑定引擎，随 Character Creator 一同提供，也可作为免费的独立应用程序使用，能够为人形网格估算出可用的骨骼和蒙皮权重。",
+      es: "El motor de rigging automático de Reallusion, incluido con Character Creator y disponible también como aplicación independiente gratuita, que estima un esqueleto funcional y pesos de piel sobre mallas humanoides.",
+      de: "Reallusions automatische Rigging-Engine, die mit Character Creator gebündelt ist und auch als kostenlose eigenständige App verfügbar ist; sie schätzt ein funktionierendes Skelett und Skin-Weights für humanoide Meshes.",
     },
     official: true,
   },
@@ -102,6 +129,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "The expanded facial rig introduced with CC5, raising the standard Facial Profile's slider count from 160 to 390 (Facial Expression, Corrective Expression and non-linear sliders combined) for finer expression control.",
       tr: "CC5 ile gelen genişletilmiş yüz rig'i; standart Facial Profile'ın kaydırıcı sayısını (Facial Expression, Corrective Expression ve doğrusal olmayan kaydırıcılar toplamında) 160'tan 390'a çıkararak daha ince ifade kontrolü sağlar.",
+      zh: "随 CC5 引入的扩展面部 rig，将标准 Facial Profile 的滑块数量从 160 个提升到 390 个（Facial Expression、Corrective Expression 和非线性滑块的总和），实现更精细的表情控制。",
+      es: "El rig facial ampliado introducido con CC5, que eleva el número de deslizadores del Facial Profile estándar de 160 a 390 (Facial Expression, Corrective Expression y deslizadores no lineales combinados) para un control de expresiones más fino.",
+      de: "Das mit CC5 eingeführte erweiterte Gesichtsrig, das die Reglerzahl des Standard-Facial-Profile von 160 auf 390 erhöht (Facial Expression, Corrective Expression und nichtlineare Regler zusammen) für feinere Ausdruckskontrolle.",
     },
     official: true,
   },
@@ -112,6 +142,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "The process of mapping a character's bones onto Character Creator's reference skeleton so it can be classified as Standard or Humanoid and play back the shared motion library through retargeting.",
       tr: "Bir karakterin kemiklerini Character Creator'ın referans iskeletine eşleyerek onu Standard veya Humanoid olarak sınıflandırma ve retargeting yoluyla ortak hareket kütüphanesini oynatabilir hale getirme işlemi.",
+      zh: "将角色的骨骼映射到 Character Creator 参考骨骼上的过程，使其能够被分类为 Standard 或 Humanoid，并通过 retargeting 播放共享动作库。",
+      es: "El proceso de mapear los huesos de un personaje sobre el esqueleto de referencia de Character Creator para que pueda clasificarse como Standard o Humanoid y reproducir la biblioteca de movimiento compartida mediante retargeting.",
+      de: "Der Prozess, die Knochen eines Charakters auf Character Creators Referenzskelett abzubilden, damit er als Standard oder Humanoid eingestuft werden kann und die gemeinsame Bewegungsbibliothek per Retargeting abspielen kann.",
     },
     official: true,
   },
@@ -122,6 +155,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "iClone's real-time motion capture plugin system, which streams body and facial data from Reallusion's own tools (like AccuFACE) or third-party devices onto a Standard-rigged character.",
       tr: "iClone'un gerçek zamanlı motion capture eklenti sistemi; beden ve yüz verisini Reallusion'ın kendi araçlarından (AccuFACE gibi) veya üçüncü taraf cihazlardan Standard rigli bir karaktere akıtır.",
+      zh: "iClone 的实时动作捕捉插件系统，能够将 Reallusion 自有工具（如 AccuFACE）或第三方设备的身体和面部数据流式传输到 Standard 绑定的角色上。",
+      es: "El sistema de plugins de captura de movimiento en tiempo real de iClone, que transmite datos corporales y faciales desde las propias herramientas de Reallusion (como AccuFACE) o dispositivos de terceros hacia un personaje con rig Standard.",
+      de: "iClones Plugin-System für Echtzeit-Motion-Capture, das Körper- und Gesichtsdaten von Reallusions eigenen Tools (wie AccuFACE) oder Geräten von Drittanbietern auf einen Standard-gerigten Charakter überträgt.",
     },
     official: true,
   },
@@ -133,6 +169,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "The current motion clip file format used across iClone and Character Creator; iMotionPlus is the variant that packages body motion together with facial and accessory data, sold under the Motion+ branding in the ActorCore Motion Store.",
       tr: "iClone ve Character Creator genelinde kullanılan güncel hareket klibi dosya formatı; iMotionPlus, beden hareketini yüz ve aksesuar verisiyle birlikte paketleyen ve ActorCore Motion Store'da Motion+ markasıyla satılan varyantıdır.",
+      zh: "iClone 和 Character Creator 通用的现行动作片段文件格式；iMotionPlus 是将身体动作与面部及配件数据打包在一起的变体，在 ActorCore Motion Store 中以 Motion+ 品牌出售。",
+      es: "El formato de archivo de clip de movimiento actual usado en iClone y Character Creator; iMotionPlus es la variante que empaqueta el movimiento corporal junto con datos faciales y de accesorios, vendida bajo la marca Motion+ en la ActorCore Motion Store.",
+      de: "Das aktuelle Dateiformat für Bewegungsclips, das in iClone und Character Creator verwendet wird; iMotionPlus ist die Variante, die Körperbewegung zusammen mit Gesichts- und Accessoire-Daten bündelt und im ActorCore Motion Store unter der Marke Motion+ verkauft wird.",
     },
     official: true,
   },
@@ -143,6 +182,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Reallusion's family of free one-click plugins (for Unreal Engine, Unity, Blender, Maya and 3ds Max) that bring a CC5/iClone character into another tool with materials, rig and (where relevant) motion already converted, instead of a plain FBX round trip.",
       tr: "Reallusion'ın ücretsiz, tek tıkla çalışan eklenti ailesi (Unreal Engine, Unity, Blender, Maya ve 3ds Max için); bir CC5/iClone karakterini düz bir FBX turu yerine materyalleri, rig'i ve (ilgiliyse) hareketi önceden dönüştürülmüş halde başka bir araca getirir.",
+      zh: "Reallusion 提供的一系列免费一键式插件（适用于 Unreal Engine、Unity、Blender、Maya 和 3ds Max），能够将 CC5/iClone 角色带入其他工具，材质、rig 以及（在相关情况下）动作都已提前转换好，而不需要走纯粹的 FBX 往返流程。",
+      es: "La familia de plugins gratuitos de un clic de Reallusion (para Unreal Engine, Unity, Blender, Maya y 3ds Max) que llevan un personaje de CC5/iClone a otra herramienta con los materiales, el rig y (cuando corresponde) el movimiento ya convertidos, en lugar de un simple ida y vuelta de FBX.",
+      de: "Reallusions Familie kostenloser Ein-Klick-Plugins (für Unreal Engine, Unity, Blender, Maya und 3ds Max), die einen CC5/iClone-Charakter mit bereits konvertierten Materialien, Rig und (wo relevant) Bewegung in ein anderes Tool bringen, statt eines reinen FBX-Umwegs.",
     },
     official: true,
   },
@@ -154,6 +196,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Pixologic's cross-application round-trip protocol; Character Creator's GoZ bridge uses it to send a character to ZBrush and back while keeping morphs, textures, clothing, hair and accessories in sync.",
       tr: "Pixologic'in uygulamalar arası gidiş-dönüş protokolü; Character Creator'ın GoZ köprüsü, bir karakteri ZBrush'a gönderip geri getirirken morfları, dokuları, kıyafeti, saçı ve aksesuarları senkronize tutmak için bunu kullanır.",
+      zh: "Pixologic 的跨应用往返协议；Character Creator 的 GoZ 桥接功能利用它将角色发送到 ZBrush 再传回来，同时让 morph、贴图、服装、头发和配件保持同步。",
+      es: "El protocolo de ida y vuelta entre aplicaciones de Pixologic; el puente GoZ de Character Creator lo usa para enviar un personaje a ZBrush y traerlo de vuelta manteniendo sincronizados los morphs, texturas, ropa, pelo y accesorios.",
+      de: "Pixologics anwendungsübergreifendes Roundtrip-Protokoll; Character Creators GoZ-Brücke nutzt es, um einen Charakter zu ZBrush zu senden und zurückzuholen, während Morphs, Texturen, Kleidung, Haare und Accessoires synchron gehalten werden.",
     },
     official: true,
   },
@@ -164,6 +209,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "A UV tiling convention that lays a character's texture space across multiple numbered tiles instead of one 0-1 square, used by Character Creator's Substance Painter bridge so each body part can be painted at full resolution.",
       tr: "Bir karakterin doku alanını tek bir 0-1 karesi yerine numaralandırılmış birden çok parçaya yayan bir UV döşeme kuralı; Character Creator'ın Substance Painter köprüsü bunu, her vücut bölümünün tam çözünürlükte boyanabilmesi için kullanır.",
+      zh: "一种 UV 平铺约定，将角色的贴图空间铺展到多个编号的 tile 上，而不是单一的 0-1 方格，Character Creator 的 Substance Painter 桥接功能借此让每个身体部位都能以完整分辨率进行绘制。",
+      es: "Una convención de teselado UV que distribuye el espacio de textura de un personaje en varios tiles numerados en lugar de un único cuadrado 0-1, usada por el puente de Substance Painter de Character Creator para que cada parte del cuerpo pueda pintarse a resolución completa.",
+      de: "Eine UV-Tiling-Konvention, die den Texturraum eines Charakters über mehrere nummerierte Tiles statt eines einzigen 0-1-Quadrats verteilt; sie wird von Character Creators Substance-Painter-Brücke genutzt, damit jeder Körperteil in voller Auflösung bemalt werden kann.",
     },
     official: true,
   },
@@ -175,6 +223,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Universal Scene Description, NVIDIA Omniverse's native interchange format; Character Creator can export characters as USD alongside its regular FBX pipeline.",
       tr: "NVIDIA Omniverse'in yerel değişim formatı olan Universal Scene Description; Character Creator, normal FBX hattının yanı sıra karakterleri USD olarak da dışa aktarabilir.",
+      zh: "Universal Scene Description，NVIDIA Omniverse 的原生交换格式；Character Creator 除了常规的 FBX 流程之外，也可以将角色导出为 USD。",
+      es: "Universal Scene Description, el formato de intercambio nativo de NVIDIA Omniverse; Character Creator puede exportar personajes como USD además de su pipeline habitual de FBX.",
+      de: "Universal Scene Description, NVIDIA Omniverses natives Austauschformat; Character Creator kann Charaktere neben der üblichen FBX-Pipeline auch als USD exportieren.",
     },
     official: true,
   },
@@ -185,6 +236,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Reallusion's browser-based marketplace for themed mocap motion packs and fully rigged, facially consistent characters, exported as FBX for use across most major 3D tools.",
       tr: "Reallusion'ın temalı mocap hareket paketleri ile tam riglenmiş, yüz açısından tutarlı karakterler için tarayıcı tabanlı pazaryeri; çoğu büyük 3D araçta kullanmak üzere FBX olarak dışa aktarılır.",
+      zh: "Reallusion 基于浏览器的市场，提供主题化的 mocap 动作包，以及完全绑定、面部表现一致的角色，以 FBX 格式导出，可在大多数主流 3D 工具中使用。",
+      es: "El mercado basado en navegador de Reallusion para packs de movimiento mocap temáticos y personajes totalmente riggeados y con coherencia facial, exportados como FBX para su uso en la mayoría de las herramientas 3D principales.",
+      de: "Reallusions browserbasierter Marktplatz für thematische Mocap-Bewegungspakete und vollständig gerigte, gesichtlich konsistente Charaktere, exportiert als FBX zur Verwendung in den meisten gängigen 3D-Tools.",
     },
     official: true,
   },
@@ -195,6 +249,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Reallusion's general 2D/3D asset marketplace for morphs, skin/makeup, hair, cloth, props and plugins, distinct from ActorCore's character-and-motion focus.",
       tr: "ActorCore'un karakter ve hareket odağından ayrı olarak, morflar, cilt/makyaj, saç, kıyafet, prop ve eklentiler için Reallusion'ın genel 2D/3D varlık pazaryeri.",
+      zh: "Reallusion 的通用 2D/3D 素材市场，提供 morph、皮肤/妆容、头发、服装、道具和插件，与 ActorCore 专注于角色和动作的定位有所区别。",
+      es: "El mercado general de assets 2D/3D de Reallusion para morphs, piel/maquillaje, pelo, ropa, props y plugins, distinto del enfoque de ActorCore en personajes y movimiento.",
+      de: "Reallusions allgemeiner 2D/3D-Asset-Marktplatz für Morphs, Haut/Make-up, Haare, Kleidung, Requisiten und Plugins, zu unterscheiden von ActorCores Fokus auf Charaktere und Bewegung.",
     },
     official: true,
   },
@@ -205,6 +262,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "A standalone manager app that installs, updates and launches Character Creator, iClone and their plugins in one place.",
       tr: "Character Creator'ı, iClone'u ve eklentilerini tek yerden kurup güncelleyen ve başlatan, bağımsız bir yönetici uygulama.",
+      zh: "一个独立的管理应用程序，可以在同一个地方安装、更新和启动 Character Creator、iClone 及其插件。",
+      es: "Una aplicación de gestión independiente que instala, actualiza y lanza Character Creator, iClone y sus plugins en un solo lugar.",
+      de: "Eine eigenständige Verwaltungs-App, die Character Creator, iClone und deren Plugins an einem Ort installiert, aktualisiert und startet.",
     },
     official: true,
   },
@@ -215,6 +275,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "A reduced-cost content license covering internal use only (rendering inside iClone/Character Creator, previsualization, education, concept work); it does not permit exporting the content to external engines or DCCs, which requires a Standard License instead.",
       tr: "Yalnızca dahili kullanımı (iClone/Character Creator içinde render, ön görselleştirme, eğitim, konsept çalışması) kapsayan, indirimli bir içerik lisansı; içeriği harici motorlara veya DCC'lere dışa aktarmaya izin vermez, bunun için Standard Lisans gerekir.",
+      zh: "一种成本较低的内容许可，仅涵盖内部使用（在 iClone/Character Creator 内渲染、预可视化、教育、概念创作）；它不允许将内容导出到外部引擎或 DCC，这需要改用 Standard License。",
+      es: "Una licencia de contenido de coste reducido que cubre solo el uso interno (renderizado dentro de iClone/Character Creator, previsualización, educación, trabajo de concepto); no permite exportar el contenido a motores o DCC externos, para lo cual se necesita en cambio una Standard License.",
+      de: "Eine kostengünstigere Inhaltslizenz, die nur die interne Nutzung abdeckt (Rendering innerhalb von iClone/Character Creator, Previsualisierung, Bildung, Konzeptarbeit); sie erlaubt nicht, den Inhalt in externe Engines oder DCCs zu exportieren, wofür stattdessen eine Standard License nötig ist.",
     },
     official: true,
   },
@@ -225,6 +288,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "The Reallusion content license that permits exporting a purchased asset to external engines and DCCs (Unreal, Unity, Blender, Maya and others) and using it across unlimited projects; the iContent License covers internal use only.",
       tr: "Satın alınan bir varlığı harici motorlara ve DCC'lere (Unreal, Unity, Blender, Maya ve diğerleri) dışa aktarmaya ve sınırsız projede kullanmaya izin veren Reallusion içerik lisansı; iContent Lisansı yalnızca dahili kullanımı kapsar.",
+      zh: "Reallusion 的内容许可，允许将购买的资产导出到外部引擎和 DCC（Unreal、Unity、Blender、Maya 等）并在无限数量的项目中使用；iContent License 仅涵盖内部使用。",
+      es: "La licencia de contenido de Reallusion que permite exportar un asset comprado a motores y DCC externos (Unreal, Unity, Blender, Maya y otros) y usarlo en proyectos ilimitados; la iContent License cubre solo el uso interno.",
+      de: "Die Reallusion-Inhaltslizenz, die es erlaubt, ein gekauftes Asset in externe Engines und DCCs (Unreal, Unity, Blender, Maya und andere) zu exportieren und es in unbegrenzt vielen Projekten zu verwenden; die iContent License deckt nur die interne Nutzung ab.",
     },
     official: true,
   },
@@ -235,6 +301,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Character Creator's built-in browser for characters, hair, clothes, props and other assets, including an online tab for signed-in Content Store and ActorCore purchases.",
       tr: "Character Creator'ın karakterler, saç, kıyafet, prop ve diğer varlıklar için yerleşik tarayıcısı; giriş yapıldığında Content Store ve ActorCore satın alımları için bir online sekmesi de içerir.",
+      zh: "Character Creator 内置的浏览器，用于浏览角色、头发、服装、道具和其他素材，还包括一个在线选项卡，用于登录后查看 Content Store 和 ActorCore 的购买内容。",
+      es: "El navegador integrado de Character Creator para personajes, pelo, ropa, props y otros assets, que incluye una pestaña online para las compras de Content Store y ActorCore tras iniciar sesión.",
+      de: "Character Creators integrierter Browser für Charaktere, Haare, Kleidung, Requisiten und andere Assets, mit einem Online-Tab für Content-Store- und ActorCore-Käufe nach dem Einloggen.",
     },
     official: true,
   },
@@ -245,6 +314,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Character Creator's main contextual editing panel; its tabs and sections change based on what is selected (a character, a garment, a hair object, a material) and host most of the tools described throughout this cookbook.",
       tr: "Character Creator'ın ana bağlamsal düzenleme paneli; sekmeleri ve bölümleri neyin seçili olduğuna göre (bir karakter, bir kıyafet, bir saç nesnesi, bir materyal) değişir ve bu cookbook boyunca anlatılan araçların çoğunu barındırır.",
+      zh: "Character Creator 的主要上下文编辑面板；其选项卡和分区会根据当前选中的对象（角色、服装、头发对象、材质）而变化，本 cookbook 中描述的大部分工具都位于此面板中。",
+      es: "El panel principal de edición contextual de Character Creator; sus pestañas y secciones cambian según lo que esté seleccionado (un personaje, una prenda, un objeto de pelo, un material) y alberga la mayoría de las herramientas descritas a lo largo de este cookbook.",
+      de: "Character Creators zentrales kontextabhängiges Bearbeitungspanel; seine Tabs und Abschnitte ändern sich je nachdem, was ausgewählt ist (ein Charakter, ein Kleidungsstück, ein Haarobjekt, ein Material), und beherbergen die meisten in diesem Cookbook beschriebenen Werkzeuge.",
     },
     official: true,
   },
@@ -255,6 +327,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "An animator-friendly rig (as opposed to the underlying skeleton) that Auto Setup plugins build automatically in the destination DCC or engine, so a CC5 character can be posed without hand-rigging control curves.",
       tr: "Auto Setup eklentilerinin hedef DCC veya motorda otomatik olarak kurduğu, alttaki iskeletin aksine animatöre yönelik bir rig; bu sayede bir CC5 karakteri kontrol eğrilerini elle riglemeden pozlanabilir.",
+      zh: "一种便于动画师使用的 rig（与底层骨骼相对），由 Auto Setup 插件在目标 DCC 或引擎中自动生成，使 CC5 角色无需手动绑定控制曲线即可摆姿势。",
+      es: "Un rig orientado al animador (a diferencia del esqueleto subyacente) que los plugins de Auto Setup construyen automáticamente en el DCC o motor de destino, de modo que un personaje de CC5 se puede posar sin riggear curvas de control a mano.",
+      de: "Ein animatorfreundliches Rig (im Gegensatz zum zugrunde liegenden Skelett), das Auto-Setup-Plugins automatisch im Ziel-DCC oder in der Ziel-Engine erstellen, sodass ein CC5-Charakter posiert werden kann, ohne Kontrollkurven von Hand zu riggen.",
     },
     official: true,
   },
@@ -265,6 +340,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Unreal Engine's real-time data-streaming connection; iClone's Unreal Live Link plugin uses it to update a character's motion in Unreal live as it changes in Character Creator or iClone, and to keep both apps synced by timecode.",
       tr: "Unreal Engine'in gerçek zamanlı veri akışı bağlantısı; iClone'un Unreal Live Link eklentisi bunu, Character Creator veya iClone'da değişen bir karakterin hareketini Unreal'de canlı olarak güncellemek ve iki uygulamayı timecode ile senkron tutmak için kullanır.",
+      zh: "Unreal Engine 的实时数据流连接；iClone 的 Unreal Live Link 插件借此在 Character Creator 或 iClone 中角色动作变化时，实时更新 Unreal 中的对应动作，并通过时间码让两个应用保持同步。",
+      es: "La conexión de transmisión de datos en tiempo real de Unreal Engine; el plugin Unreal Live Link de iClone la usa para actualizar en vivo el movimiento de un personaje en Unreal a medida que cambia en Character Creator o iClone, y para mantener ambas aplicaciones sincronizadas por timecode.",
+      de: "Unreal Engines Echtzeit-Datenstreaming-Verbindung; iClones Unreal-Live-Link-Plugin nutzt sie, um die Bewegung eines Charakters in Unreal live zu aktualisieren, während sie sich in Character Creator oder iClone ändert, und um beide Anwendungen per Timecode synchron zu halten.",
     },
     official: true,
   },
@@ -275,6 +353,9 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition: {
       en: "Unreal Engine's high-end facial capture and solving tool; CC5 characters can use it directly because they share MetaHuman's skeleton and facial control structure.",
       tr: "Unreal Engine'in üst seviye yüz yakalama ve çözümleme aracı; CC5 karakterleri MetaHuman'ın iskeletini ve yüz kontrol yapısını paylaştığı için bunu doğrudan kullanabilir.",
+      zh: "Unreal Engine 的高端面部捕捉与求解工具；CC5 角色可以直接使用它，因为二者共享 MetaHuman 的骨骼和面部控制结构。",
+      es: "La herramienta de captura y resolución facial de gama alta de Unreal Engine; los personajes de CC5 pueden usarla directamente porque comparten el esqueleto y la estructura de control facial de MetaHuman.",
+      de: "Unreal Engines High-End-Tool für Gesichtserfassung und -lösung; CC5-Charaktere können es direkt nutzen, da sie sich Skelett und Gesichtssteuerungsstruktur mit MetaHuman teilen.",
     },
     official: true,
   },

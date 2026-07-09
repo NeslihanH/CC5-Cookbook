@@ -186,20 +186,51 @@ npm run preview  # serve the production build
   `tr.json`, kept in parity. The old M0 `roadmap-grid`/`roadmap-card` CSS
   and the unused `status.comingSoon` copy were removed/left unused rather
   than kept as dead weight.
-- M9 translation pass to zh/es/de: NOT STARTED.
+- M9 translation pass to zh/es/de: DONE. All 39 UI copy keys in
+  `zh.json`/`es.json`/`de.json` filled (previously empty `{}`), written
+  natively per language, not machine-translated; `status.comingSoon`
+  dropped as dead copy (unused since M8's `EmptyState` replaced it). All 88
+  data entries across the 10 `src/data/*.ts` files now carry `zh`/`es`/`de`
+  alongside `en`/`tr` on every `Localized` field, added via three parallel
+  background agents split by file (not by language, to avoid concurrent
+  edits to the same files): (1) `gettingStarted`/`coreCreation`/
+  `riggingAnimation`, (2) `pipelineExport`/`ecosystem`/`recipes`, (3)
+  `bestPractices`/`whatsNew`/`glossary`/`shortcuts`. `en`/`tr` values were
+  never touched (verified by diffing text content, not just line count,
+  against the pre-M9 commit).
+
+  **QA note:** agent (2)'s `es`/`de` output for `pipelineExport.ts`,
+  `ecosystem.ts` and `recipes.ts` had every Spanish accent and German
+  umlaut/ß stripped (e.g. "esta" instead of "está", "Okosystem" instead of
+  "Ökosystem") despite that agent self-reporting `npm run build`/`lint`
+  passing, since neither catches language-orthography bugs. Caught by a
+  manual grep for common unaccented Spanish/German words after the fact,
+  not by trusting the agent's own "done" report. Fixed with a fourth,
+  targeted agent that read each sentence and fixed accent placement based
+  on grammar (blind find-and-replace is wrong here: Spanish "esta" without
+  an accent is a legitimate word meaning "this"). Re-verified independently
+  again afterward. Lesson: build/lint passing does not mean translated
+  content is orthographically correct - that needs its own explicit check,
+  every time, regardless of what a report claims.
+
+  Full verification performed on the merged result: `npm run build` and
+  `npm run lint` clean, zero em-dash characters across `src/data/*.ts`, all
+  88 entries confirmed to have non-empty `zh`/`es`/`de` on every `Localized`
+  field (script-checked, not sampled), zero duplicate `id`s, and `en`/`tr`
+  text content byte-identical to the pre-M9 commit.
 - M10 polish + trademark/English audit + deploy: NOT STARTED.
 
 ## Next step
 
-M9: translate all EN+TR content (88 entries across `src/data/*.ts`) plus the
-UI copy in `en.json`/`tr.json` into `zh`, `es`, `de`. Per Decisions.md D4,
-these are optional `Localized` fields that currently fall back to English;
-translations must be written fresh in each language's own voice, not
-machine-translated-sounding (same rule as EN/TR: Decisions.md D1). This is a
-large, mostly mechanical-but-not-really milestone - consider whether to do
-it as one pass per language or one pass per data file, and whether it
-belongs in a fresh session given its size (see the token-usage discussion
-from this session: long single sessions get expensive as context grows;
-translation work has no research phase, so a fresh `/clear`d session losing
-CLAUDE.md/Decisions.md context costs nothing since neither changes much
-here).
+M10: polish pass before deploy. Needs: a Reallusion-trademark usage audit
+(CLAUDE.md's "Hard rules" already say trademarks are descriptive-use only,
+never implying endorsement - check the actual UI/content for compliance),
+an English-copy audit (nothing accidentally non-English leaking into `name`/
+`term`/`keys`/`subgroup`/`targetTool` fields, which must stay plain English
+literals per Decisions.md D4/D8), a look at the bundle-size warning from
+`npm run build` (single JS chunk is now ~560KB / ~199KB gzipped with 5
+languages of content - consider whether code-splitting is worth it for a
+static reference SPA, or whether it's fine as-is), and then the actual
+GitHub Pages deploy via the GitHub Actions workflow already scaffolded in
+M0. Confirm `npm run build` output looks right with `npm run preview`
+before deploying.
