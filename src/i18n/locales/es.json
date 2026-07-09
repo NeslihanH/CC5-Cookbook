@@ -4,6 +4,7 @@
     "tagline": "Una guía de referencia para los flujos de trabajo, funciones y buenas prácticas de Character Creator 5"
   },
   "nav": {
+    "all": "Todo",
     "gettingStarted": "Primeros pasos",
     "coreCreation": "Creación básica",
     "riggingAnimation": "Rigging y animación",
@@ -37,9 +38,10 @@
     "toggleToLight": "Modo claro"
   },
   "search": {
-    "placeholder": "Buscar en esta sección...",
+    "placeholder": "Buscar...",
+    "resultCount": "{{count}} resultados",
     "noResultsTitle": "No hay entradas que coincidan con \"{{query}}\"",
-    "noResultsHint": "Prueba con otro término, o borra la búsqueda para ver todo el contenido de esta sección."
+    "noResultsHint": "Prueba con otro término, o borra la búsqueda para ver todo el contenido."
   },
   "filter": {
     "allLevels": "Todos los niveles"

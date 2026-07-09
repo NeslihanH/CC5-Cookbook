@@ -257,8 +257,17 @@ body {
 .category-btn.is-active .category-count { color: var(--accent); background: var(--bg-elev); }
 
 /* ------------------------------------------------------------------ */
-/* Content heading (active category)                                    */
+/* Content sections (one per category; several stacked in the All view) */
 /* ------------------------------------------------------------------ */
+.cat-section { margin-bottom: 40px; }
+.cat-section:last-of-type { margin-bottom: 0; }
+
+.result-count {
+  margin: 0 0 18px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
 .section-title {
   display: flex;
   align-items: center;

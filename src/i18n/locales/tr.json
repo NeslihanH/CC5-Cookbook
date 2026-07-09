@@ -4,6 +4,7 @@
     "tagline": "Character Creator 5 iş akışları, özellikleri ve en iyi pratikleri için bir başvuru rehberi"
   },
   "nav": {
+    "all": "Tümü",
     "gettingStarted": "Başlarken",
     "coreCreation": "Çekirdek Yaratım",
     "riggingAnimation": "Rigging ve Animasyon",
@@ -37,9 +38,10 @@
     "toggleToLight": "Aydınlık mod"
   },
   "search": {
-    "placeholder": "Bu bölümde ara...",
+    "placeholder": "Ara...",
+    "resultCount": "{{count}} sonuç",
     "noResultsTitle": "\"{{query}}\" ile eşleşen girdi yok",
-    "noResultsHint": "Farklı bir terim dene, ya da bu bölümdeki her şeyi görmek için aramayı temizle."
+    "noResultsHint": "Farklı bir terim dene, ya da her şeyi görmek için aramayı temizle."
   },
   "filter": {
     "allLevels": "Tüm seviyeler"

@@ -4,6 +4,7 @@
     "tagline": "Ein Nachschlagewerk für Workflows, Funktionen und Best Practices in Character Creator 5"
   },
   "nav": {
+    "all": "Alle",
     "gettingStarted": "Erste Schritte",
     "coreCreation": "Kernerstellung",
     "riggingAnimation": "Rigging & Animation",
@@ -37,9 +38,10 @@
     "toggleToLight": "Heller Modus"
   },
   "search": {
-    "placeholder": "In diesem Bereich suchen...",
+    "placeholder": "Suchen...",
+    "resultCount": "{{count}} Ergebnisse",
     "noResultsTitle": "Keine Einträge stimmen mit \"{{query}}\" überein",
-    "noResultsHint": "Versuche einen anderen Begriff, oder lösche die Suche, um alle Einträge in diesem Bereich zu sehen."
+    "noResultsHint": "Versuche einen anderen Begriff, oder lösche die Suche, um alle Einträge zu sehen."
   },
   "filter": {
     "allLevels": "Alle Stufen"

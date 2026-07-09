@@ -4,6 +4,7 @@
     "tagline": "A field guide to Character Creator 5 workflows, features and best practices"
   },
   "nav": {
+    "all": "All",
     "gettingStarted": "Getting Started",
     "coreCreation": "Core Creation",
     "riggingAnimation": "Rigging & Animation",
@@ -37,9 +38,10 @@
     "toggleToLight": "Light mode"
   },
   "search": {
-    "placeholder": "Search this section...",
+    "placeholder": "Search...",
+    "resultCount": "{{count}} results",
     "noResultsTitle": "No entries match \"{{query}}\"",
-    "noResultsHint": "Try a different term, or clear the search to browse everything in this section."
+    "noResultsHint": "Try a different term, or clear the search to browse everything."
   },
   "filter": {
     "allLevels": "All levels"

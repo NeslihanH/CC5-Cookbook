@@ -4,6 +4,7 @@
     "tagline": "Character Creator 5 工作流程、功能与最佳实践指南"
   },
   "nav": {
+    "all": "全部",
     "gettingStarted": "入门指南",
     "coreCreation": "核心创建",
     "riggingAnimation": "绑定与动画",
@@ -37,9 +38,10 @@
     "toggleToLight": "浅色模式"
   },
   "search": {
-    "placeholder": "搜索本部分...",
+    "placeholder": "搜索...",
+    "resultCount": "{{count}} 条结果",
     "noResultsTitle": "没有与\"{{query}}\"匹配的条目",
-    "noResultsHint": "换一个词试试，或清空搜索以浏览本部分的全部内容。"
+    "noResultsHint": "换一个词试试，或清空搜索以浏览全部内容。"
   },
   "filter": {
     "allLevels": "所有级别"
