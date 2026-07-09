@@ -134,13 +134,6 @@ body {
 
 .header-controls { display: flex; align-items: center; gap: 10px; }
 
-.entry-count {
-  font-size: 12px;
-  font-weight: 650;
-  color: var(--text-faint);
-  white-space: nowrap;
-}
-
 .lang-switch {
   display: inline-flex;
   background: var(--surface-2);

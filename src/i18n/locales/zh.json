@@ -58,8 +58,5 @@
     "cc4": "CC4",
     "cc5": "CC5",
     "context": "情境"
-  },
-  "stats": {
-    "entryCount": "{{count}} 条内容"
   }
 }

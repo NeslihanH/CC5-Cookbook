@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SUPPORTED_LOCALES } from "../i18n";
 import { useTheme } from "../hooks/useTheme";
-import { totalEntries } from "../data/content";
 import { SearchBar } from "./SearchBar";
 
 const LOCALE_LABEL: Record<string, string> = {
@@ -34,7 +33,6 @@ export function Header({ query, onQuery }: Props) {
           </div>
         </div>
         <div className="header-controls">
-          <span className="entry-count">{t("stats.entryCount", { count: totalEntries })}</span>
           <div className="lang-switch" role="group" aria-label="Language">
             {SUPPORTED_LOCALES.map((locale) => (
               <button
