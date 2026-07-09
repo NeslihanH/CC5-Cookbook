@@ -93,8 +93,16 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 16px 20px;
+  padding: 16px 20px 10px;
   flex-wrap: wrap;
+}
+
+/* Full-width search row, right under the brand (Suno Cookbook style). */
+.header-search {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  padding: 0 20px 14px;
 }
 
 .brand { display: flex; align-items: center; gap: 12px; }
@@ -175,7 +183,8 @@ body {
   align-items: center;
   gap: 9px;
   max-width: var(--maxw);
-  margin: 14px auto 0;
+  width: calc(100% - 40px);
+  margin: 16px auto 0;
   padding: 10px 16px;
   border: 1px solid var(--accent-border);
   background: var(--accent-soft);
@@ -183,6 +192,7 @@ body {
   font-size: 12.5px;
   color: var(--text-soft);
 }
+.notice-emoji { flex-shrink: 0; font-size: 15px; line-height: 1; }
 .notice-text { line-height: 1.45; flex: 1; min-width: 160px; }
 
 .notice-github {
@@ -197,10 +207,6 @@ body {
 }
 .notice-github:hover { color: var(--accent); background: var(--surface-2); }
 
-@media (min-width: 861px) {
-  .notice-banner { margin-top: 16px; width: calc(100% - 40px); }
-}
-
 /* ------------------------------------------------------------------ */
 /* Body layout: left sidebar + content (Suno Cookbook style)            */
 /* ------------------------------------------------------------------ */
@@ -214,7 +220,8 @@ body {
   align-items: start;
 }
 
-.sidebar { position: sticky; top: 24px; }
+/* Stick below the sticky header (brand row + search row ~= 128px tall). */
+.sidebar { position: sticky; top: 140px; }
 
 .content { min-width: 0; }
 

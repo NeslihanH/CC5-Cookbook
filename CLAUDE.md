@@ -69,7 +69,8 @@ src/
                    English fallback)
   lib/search.ts    diacritic-insensitive (Turkish-aware) search normalize +
                    matchesQuery helper
-  components/      Header, CategoryNav, SearchBar, SkillFilter, Badge
+  components/      Header (brand row + full-width sticky search),
+                   NoticeBanner, CategoryNav, SearchBar, SkillFilter, Badge
     cards/         one renderer per ContentItem shape: FeatureCard,
                    RecipeCard, BestPracticeCard, GlossaryCard, ShortcutCard,
                    VersionDiffCard

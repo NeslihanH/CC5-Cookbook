@@ -24,8 +24,8 @@ import {
 import { useLocalized } from "./hooks/useLocalized";
 import { matchesQuery } from "./lib/search";
 import { Header } from "./components/Header";
+import { NoticeBanner } from "./components/NoticeBanner";
 import { CategoryNav, type NavSelection } from "./components/CategoryNav";
-import { SearchBar } from "./components/SearchBar";
 import { SkillFilter } from "./components/SkillFilter";
 import { FeatureCard } from "./components/cards/FeatureCard";
 import { RecipeCard } from "./components/cards/RecipeCard";
@@ -217,17 +217,19 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header query={query} onQuery={setQuery} />
+      <NoticeBanner />
       <div className="layout">
         <aside className="sidebar">
           <CategoryNav active={active} onSelect={handleSelect} countFor={countFor} />
         </aside>
 
         <main className="content">
-          <div className="toolbar">
-            <SearchBar value={query} onChange={setQuery} />
-            {active === "practice" && <SkillFilter value={skillLevel} onChange={setSkillLevel} />}
-          </div>
+          {active === "practice" && (
+            <div className="toolbar">
+              <SkillFilter value={skillLevel} onChange={setSkillLevel} />
+            </div>
+          )}
 
           {query && <p className="result-count">{t("search.resultCount", { count: totalMatched })}</p>}
 
